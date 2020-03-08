@@ -1,2 +1,2 @@
-# linhaishen.github.io
+https://linhaishen.github.io
 blog powered by Hexo
