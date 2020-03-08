@@ -15,7 +15,9 @@ tags:
 
 # your hexo bases setup
 1. Git clone git@github.com:your/your.github.io.git
-1. Change dir to your cloned "hexo", install packages for hexo```
+1. Change dir to your cloned "hexo", install packages for hexo
+1. Install theme if you are not using "landscape"
+```
 cd your.github.io
 npm install
 ```
