@@ -20,16 +20,33 @@ tags:
 cd your.github.io
 npm install
 ```
-1. Install theme if you are not using "landscape"
 1. Make sure deploy branch in _config.yml is master
 1. Write with hexo new post
 1. Deploy to your.github.io master branch with hexo g -d
 
 # Synchronize
 1. git clone for inintial hexo base
-1. git pull for synchronize
-1. git add . after writing
-1. git commit & push to your.github.io "hexo" branch
+1. Install theme if you are not using "landscape"
+## themes/next example
+1. On your up to date hexo base: Copy your "themes/next/_config.yml" to your "hexo" branch root
+```
+cp themes/next/_config.yml next-config.yml
+git add .
+git commit -m "sync theme config"
+git push
+```
+1. On your new hexo base: git pull to get the latest theme's config
+```
+git pull
+cp next-config.yml themes/next/_config.yml
+```
+1. hexo new post to start writing
+1. after writing commit source to your.github.io "hexo" branch
+```
+git add .
+git commit
+git push
+```
 
 Reference from:
 {% blockquote CrazyMilk https://www.zhihu.com/question/21193762 %}
