@@ -1,2 +1,3 @@
 https://linhaishen.github.io
-blog powered by Hexo
+
+blog powered by Github Pages & Hexo
