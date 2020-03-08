@@ -13,7 +13,7 @@ tags:
 1. Create a branch named "hexo" from your.github.io master branch
 1. Set "hexo" as your default branch of your.github.io
 
-# your hexo bases setup
+# your new hexo bases setup
 1. Git clone git@github.com:your/your.github.io.git
 1. Change dir to your cloned "hexo", install packages for hexo
 ```
@@ -21,8 +21,6 @@ cd your.github.io
 npm install
 ```
 1. Make sure deploy branch in _config.yml is master
-1. Write with hexo new post
-1. Deploy to your.github.io master branch with hexo g -d
 
 # Synchronize
 1. git clone for inintial hexo base
@@ -40,6 +38,7 @@ git push
 git pull
 cp next-config.yml themes/next/_config.yml
 ```
+# Writing
 1. hexo new post to start writing
 1. after writing commit source to your.github.io "hexo" branch
 ```
@@ -47,6 +46,7 @@ git add .
 git commit
 git push
 ```
+1. hexo g -d to deploy to your.github.io master branch
 
 Reference from:
 {% blockquote CrazyMilk https://www.zhihu.com/question/21193762 %}
