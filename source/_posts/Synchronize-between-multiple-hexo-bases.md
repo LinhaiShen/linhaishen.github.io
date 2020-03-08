@@ -16,11 +16,11 @@ tags:
 # your hexo bases setup
 1. Git clone git@github.com:your/your.github.io.git
 1. Change dir to your cloned "hexo", install packages for hexo
-1. Install theme if you are not using "landscape"
 ```
 cd your.github.io
 npm install
 ```
+1. Install theme if you are not using "landscape"
 1. Make sure deploy branch in _config.yml is master
 1. Write with hexo new post
 1. Deploy to your.github.io master branch with hexo g -d
