@@ -101,3 +101,8 @@ deploy:
   type: git
   repo: git@github.com:LinhaiShen/linhaishen.github.io.git
   branch: master
+
+search:
+  path: search.xml
+  field: post
+  content: true

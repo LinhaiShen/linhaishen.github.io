@@ -13,6 +13,7 @@ tags:
 1. Create a branch named "hexo" from your.github.io master branch
 1. Set "hexo" as your default branch of your.github.io
 
+<!-- more -->
 # your new hexo bases setup
 1. Git clone git@github.com:your/your.github.io.git
 1. Change dir to your cloned "hexo", install packages for hexo

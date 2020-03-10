@@ -9,6 +9,7 @@ tags:
 ---
 
 1. edit redmine-root/config/configuration.yml
+<!-- more -->
 ```
 production:
   email_delivery:
