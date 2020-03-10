@@ -106,3 +106,10 @@ search:
   path: search.xml
   field: post
   content: true
+
+# hexo-admin authentification
+admin:
+  username: admin
+  password_hash: $2a$10$SliQRg7.uznnmZqw2kxnkO0KPv.lhawSQJXx1JsG6E6bVhM8kq1SC
+  secret: it's password
+  deployCommand: './hexo-d.sh'

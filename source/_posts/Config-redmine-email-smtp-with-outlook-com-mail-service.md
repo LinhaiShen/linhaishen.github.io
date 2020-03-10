@@ -1,13 +1,12 @@
----
 title: Config redmine email smtp with outlook.com mail service
-date: 2020-03-09 16:23:15
 tags:
- - config
- - redmine
- - outlook.com
- - smtp
+  - config
+  - redmine
+  - outlook.com
+  - smtp
+categories: []
+date: 2020-03-09 16:23:00
 ---
-
 1. edit redmine-root/config/configuration.yml
 <!-- more -->
 ```
