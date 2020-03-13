@@ -6,15 +6,15 @@
   
   <title>Install sqlite3 on ubuntu by compiling from source code | LinhaiShen</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="download source code package from https:&#x2F;&#x2F;www.sqlite.org&#x2F;download.html1curl -O https:&#x2F;&#x2F;www.sqlite.org&#x2F;snapshot&#x2F;sqlite-snapshot-202003121754.tar.gz unzip and enter the dir12tar xvz">
+  <meta name="description" content="prepare build tools1sudo apt-get install build-essential download source code package from https:&#x2F;&#x2F;www.sqlite.org&#x2F;download.html1curl -O https:&#x2F;&#x2F;www.sqlite.org&#x2F;snapshot&#x2F;sqlite-snap">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Install sqlite3 on ubuntu by compiling from source code">
 <meta property="og:url" content="http://linhaishen.github.io/2020/03/13/Install-sqlite3-on-ubuntu-by-compiling-from-source-code/index.html">
 <meta property="og:site_name" content="LinhaiShen">
-<meta property="og:description" content="download source code package from https:&#x2F;&#x2F;www.sqlite.org&#x2F;download.html1curl -O https:&#x2F;&#x2F;www.sqlite.org&#x2F;snapshot&#x2F;sqlite-snapshot-202003121754.tar.gz unzip and enter the dir12tar xvz">
+<meta property="og:description" content="prepare build tools1sudo apt-get install build-essential download source code package from https:&#x2F;&#x2F;www.sqlite.org&#x2F;download.html1curl -O https:&#x2F;&#x2F;www.sqlite.org&#x2F;snapshot&#x2F;sqlite-snap">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-03-13T02:43:00.000Z">
-<meta property="article:modified_time" content="2020-03-13T04:05:04.580Z">
+<meta property="article:modified_time" content="2020-03-13T04:08:50.108Z">
 <meta property="article:author" content="Linhai Shen">
 <meta property="article:tag" content="sqlite">
 <meta property="article:tag" content="ubuntu">
@@ -108,6 +108,7 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <ol>
+<li>prepare build tools<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install build-essential</span><br></pre></td></tr></table></figure></li>
 <li>download source code package from <a href="https://www.sqlite.org/download.html" target="_blank" rel="noopener">https://www.sqlite.org/download.html</a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -O https:&#x2F;&#x2F;www.sqlite.org&#x2F;snapshot&#x2F;sqlite-snapshot-202003121754.tar.gz</span><br></pre></td></tr></table></figure></li>
 <li>unzip and enter the dir<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tar xvzf sqlite...tar.gz</span><br><span class="line">cd sqlite...</span><br></pre></td></tr></table></figure></li>
 <li>compile, build and install<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.&#x2F;configure</span><br><span class="line">make</span><br><span class="line">#if failed, try &quot;make clean&quot; and run &quot;make&quot; again</span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure>
@@ -116,6 +117,7 @@
 </ol>
 <p>Reference from:</p>
 <ol>
+<li><a href="https://stackoverflow.com/questions/19816275/no-acceptable-c-compiler-found-in-path-when-installing-python" target="_blank" rel="noopener">https://stackoverflow.com/questions/19816275/no-acceptable-c-compiler-found-in-path-when-installing-python</a></li>
 <li>INSTALL doc in the package</li>
 <li><blockquote><p>SQLite 安装</p>
 <footer><strong>runoob.com</strong><cite><a href="https://www.runoob.com/sqlite/sqlite-installation.html" target="_blank" rel="noopener">www.runoob.com/sqlite/sqlite-installation.html</a></cite></footer></blockquote></li>
@@ -124,7 +126,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://linhaishen.github.io/2020/03/13/Install-sqlite3-on-ubuntu-by-compiling-from-source-code/" data-id="ck7pnrfcl0002d8u8a5tl68xy" data-title="Install sqlite3 on ubuntu by compiling from source code" class="article-share-link">Share</a>
+      <a data-url="http://linhaishen.github.io/2020/03/13/Install-sqlite3-on-ubuntu-by-compiling-from-source-code/" data-id="ck7pnw1le0002efu8gp3bch8m" data-title="Install sqlite3 on ubuntu by compiling from source code" class="article-share-link">Share</a>
       
       
       
