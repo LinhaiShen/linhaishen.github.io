@@ -2,7 +2,9 @@
 menu:
   Home: /
   Resume: /resume/
+  #Tags: /tags/
   Archives: /archives
+  Admin: /admin
 #rss: /atom.xml
 #banner: "images/banner.jpg"
 
