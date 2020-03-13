@@ -4,6 +4,43 @@
   
     
     <entry>
+      <title>Install sqlite3 on ubuntu by compiling from source code</title>
+      <link href="/2020/03/13/Install-sqlite3-on-ubuntu-by-compiling-from-source-code/"/>
+      <url>/2020/03/13/Install-sqlite3-on-ubuntu-by-compiling-from-source-code/</url>
+      
+        <content type="html"><![CDATA[<ol><li>download source code package from <a href="https://www.sqlite.org/download.html" target="_blank" rel="noopener">https://www.sqlite.org/download.html</a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -O https:&#x2F;&#x2F;www.sqlite.org&#x2F;snapshot&#x2F;sqlite-snapshot-202003121754.tar.gz</span><br></pre></td></tr></table></figure></li><li>unzip and enter the dir<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tar xvzf sqlite...tar.gz</span><br><span class="line">cd sqlite...</span><br></pre></td></tr></table></figure></li><li>compile, build and install<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.&#x2F;configure</span><br><span class="line">make</span><br><span class="line">#if failed, try &quot;make clean&quot; and run &quot;make&quot; again</span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure></li></ol><p>Reference from:</p><ol><li>INSTALL doc in the package</li><li><blockquote><p>SQLite 安装</p><footer><strong>runoob.com</strong><cite><a href="https://www.runoob.com/sqlite/sqlite-installation.html" target="_blank" rel="noopener">www.runoob.com/sqlite/sqlite-installation.html</a></cite></footer></blockquote></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> sqlite </tag>
+            
+            <tag> ubuntu </tag>
+            
+            <tag> make </tag>
+            
+            <tag> compile </tag>
+            
+            <tag> build-essential </tag>
+            
+            <tag> build </tag>
+            
+            <tag> install </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Config redmine email smtp with outlook.com mail service</title>
       <link href="/2020/03/09/Config-redmine-email-smtp-with-outlook-com-mail-service/"/>
       <url>/2020/03/09/Config-redmine-email-smtp-with-outlook-com-mail-service/</url>

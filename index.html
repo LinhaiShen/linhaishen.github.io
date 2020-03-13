@@ -72,6 +72,63 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Install-sqlite3-on-ubuntu-by-compiling-from-source-code" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2020/03/13/Install-sqlite3-on-ubuntu-by-compiling-from-source-code/" class="article-date">
+  <time class="dt-published" datetime="2020-03-13T02:43:00.000Z" itemprop="datePublished">2020-03-13</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2020/03/13/Install-sqlite3-on-ubuntu-by-compiling-from-source-code/">Install sqlite3 on ubuntu by compiling from source code</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <ol>
+<li>download source code package from <a href="https://www.sqlite.org/download.html" target="_blank" rel="noopener">https://www.sqlite.org/download.html</a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -O https:&#x2F;&#x2F;www.sqlite.org&#x2F;snapshot&#x2F;sqlite-snapshot-202003121754.tar.gz</span><br></pre></td></tr></table></figure></li>
+<li>unzip and enter the dir<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tar xvzf sqlite...tar.gz</span><br><span class="line">cd sqlite...</span><br></pre></td></tr></table></figure></li>
+<li>compile, build and install<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.&#x2F;configure</span><br><span class="line">make</span><br><span class="line">#if failed, try &quot;make clean&quot; and run &quot;make&quot; again</span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>Reference from:</p>
+<ol>
+<li>INSTALL doc in the package</li>
+<li><blockquote><p>SQLite 安装</p>
+<footer><strong>runoob.com</strong><cite><a href="https://www.runoob.com/sqlite/sqlite-installation.html" target="_blank" rel="noopener">www.runoob.com/sqlite/sqlite-installation.html</a></cite></footer></blockquote></li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://linhaishen.github.io/2020/03/13/Install-sqlite3-on-ubuntu-by-compiling-from-source-code/" data-id="ck7pnrfcl0002d8u8a5tl68xy" data-title="Install sqlite3 on ubuntu by compiling from source code" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/build/" rel="tag">build</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/build-essential/" rel="tag">build-essential</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/compile/" rel="tag">compile</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/install/" rel="tag">install</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/make/" rel="tag">make</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sqlite/" rel="tag">sqlite</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/" rel="tag">ubuntu</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-Config-redmine-email-smtp-with-outlook-com-mail-service" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2020/03/09/Config-redmine-email-smtp-with-outlook-com-mail-service/" class="article-date">
@@ -104,7 +161,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://linhaishen.github.io/2020/03/09/Config-redmine-email-smtp-with-outlook-com-mail-service/" data-id="ck7lcmiq10000abu8fof28i69" data-title="Config redmine email smtp with outlook.com mail service" class="article-share-link">Share</a>
+      <a data-url="http://linhaishen.github.io/2020/03/09/Config-redmine-email-smtp-with-outlook-com-mail-service/" data-id="ck7pnrfc80000d8u82jjw3qi4" data-title="Config redmine email smtp with outlook.com mail service" class="article-share-link">Share</a>
       
       
       
@@ -153,7 +210,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://linhaishen.github.io/2020/03/08/Synchronize-between-multiple-hexo-bases/" data-id="ck7lcmiqr0009abu867c8glc0" data-title="Synchronize between multiple hexo bases" class="article-share-link">Share</a>
+      <a data-url="http://linhaishen.github.io/2020/03/08/Synchronize-between-multiple-hexo-bases/" data-id="ck7pnrfcv0004d8u89ug82rpi" data-title="Synchronize between multiple hexo bases" class="article-share-link">Share</a>
       
       
       
@@ -174,13 +231,20 @@
           <aside id="sidebar">
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">linux</a></li></ul>
+    </div>
+  </div>
+
 
   
     
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/branch/" style="font-size: 10px;">branch</a> <a href="/tags/config/" style="font-size: 10px;">config</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/outlook-com/" style="font-size: 10px;">outlook.com</a> <a href="/tags/redmine/" style="font-size: 10px;">redmine</a> <a href="/tags/smtp/" style="font-size: 10px;">smtp</a>
+      <a href="/tags/branch/" style="font-size: 10px;">branch</a> <a href="/tags/build/" style="font-size: 10px;">build</a> <a href="/tags/build-essential/" style="font-size: 10px;">build-essential</a> <a href="/tags/compile/" style="font-size: 10px;">compile</a> <a href="/tags/config/" style="font-size: 10px;">config</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/install/" style="font-size: 10px;">install</a> <a href="/tags/make/" style="font-size: 10px;">make</a> <a href="/tags/outlook-com/" style="font-size: 10px;">outlook.com</a> <a href="/tags/redmine/" style="font-size: 10px;">redmine</a> <a href="/tags/smtp/" style="font-size: 10px;">smtp</a> <a href="/tags/sqlite/" style="font-size: 10px;">sqlite</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a>
     </div>
   </div>
 
@@ -200,6 +264,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2020/03/13/Install-sqlite3-on-ubuntu-by-compiling-from-source-code/">Install sqlite3 on ubuntu by compiling from source code</a>
+          </li>
         
           <li>
             <a href="/2020/03/09/Config-redmine-email-smtp-with-outlook-com-mail-service/">Config redmine email smtp with outlook.com mail service</a>
