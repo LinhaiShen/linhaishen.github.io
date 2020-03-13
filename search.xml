@@ -79,6 +79,12 @@
         <content type="html"><![CDATA[<h1 id="your-github-io-setup"><a href="#your-github-io-setup" class="headerlink" title="your.github.io setup"></a>your.github.io setup</h1><ol><li>Initial your.github.io with hexo deployment</li><li>Create a branch named “hexo” from your.github.io master branch</li><li>Set “hexo” as your default branch of your.github.io</li></ol><a id="more"></a><h1 id="your-new-hexo-bases-setup"><a href="#your-new-hexo-bases-setup" class="headerlink" title="your new hexo bases setup"></a>your new hexo bases setup</h1><ol><li>Git clone <a href="mailto:git@github.com">git@github.com</a>:your/your.github.io.git</li><li>Change dir to your cloned “hexo”, install packages for hexo<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd your.github.io</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure></li><li>Make sure deploy branch in _config.yml is master</li></ol><h1 id="Synchronize"><a href="#Synchronize" class="headerlink" title="Synchronize"></a>Synchronize</h1><ol><li>git clone for inintial hexo base</li><li>Install theme if you are not using “landscape”<h2 id="themes-next-example"><a href="#themes-next-example" class="headerlink" title="themes/next example"></a>themes/next example</h2></li><li>On your up to date hexo base: Copy your “themes/next/_config.yml” to your “hexo” branch root<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cp themes&#x2F;next&#x2F;_config.yml next-config.yml</span><br><span class="line">git add .</span><br><span class="line">git commit -m &quot;sync theme config&quot;</span><br><span class="line">git push</span><br></pre></td></tr></table></figure></li><li>On your new hexo base: git pull to get the latest theme’s config<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git pull</span><br><span class="line">cp next-config.yml themes&#x2F;next&#x2F;_config.yml</span><br></pre></td></tr></table></figure><h1 id="Writing"><a href="#Writing" class="headerlink" title="Writing"></a>Writing</h1></li><li>hexo new post to start writing</li><li>after writing commit source to your.github.io “hexo” branch<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit</span><br><span class="line">git push</span><br></pre></td></tr></table></figure></li><li>hexo g -d to deploy to your.github.io master branch</li></ol><p>Reference from:</p><blockquote><p>使用hexo，如果换了电脑怎么更新博客？</p><footer><strong>CrazyMilk</strong><cite><a href="https://www.zhihu.com/question/21193762" target="_blank" rel="noopener">www.zhihu.com/question/21193762</a></cite></footer></blockquote>]]></content>
       
       
+      <categories>
+          
+          <category> hexo </category>
+          
+      </categories>
+      
       
         <tags>
             
@@ -87,6 +93,8 @@
             <tag> git </tag>
             
             <tag> branch </tag>
+            
+            <tag> github </tag>
             
         </tags>
       
