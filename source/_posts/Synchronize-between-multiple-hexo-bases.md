@@ -1,10 +1,13 @@
----
 title: Synchronize between multiple hexo bases
-date: 2020-03-08 07:27:52
-tags: 
-- hexo
-- git
-- branch
+tags:
+  - hexo
+  - git
+  - branch
+  - github
+categories:
+  - hexo
+author: Linhai Shen
+date: 2020-03-08 07:27:00
 ---
 
 # your.github.io setup
