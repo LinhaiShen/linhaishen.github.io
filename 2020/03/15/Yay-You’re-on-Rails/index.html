@@ -14,7 +14,7 @@
 <meta property="og:description" content="create my 1st rails appliaction1rails new blog got stuck during bundle install runningctrl+c exit Change local gem source and run bundle install again1234567cd blogvim Gemfilesource &#39;https:&#x2F;">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-03-15T03:03:00.000Z">
-<meta property="article:modified_time" content="2020-03-15T03:29:09.232Z">
+<meta property="article:modified_time" content="2020-03-15T03:43:35.658Z">
 <meta property="article:author" content="Linhai Shen">
 <meta property="article:tag" content="rails">
 <meta property="article:tag" content="gem">
@@ -116,9 +116,12 @@ try <code>rails webpacker:install</code> got<figure class="highlight plain"><tab
 </ul>
 </li>
 <li>Yay! You’re on Rails!<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rails server</span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
+<hr>
+<p>change gem and bundle source</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gem sources --add https:&#x2F;&#x2F;gems.ruby-china.com&#x2F; --remove https:&#x2F;&#x2F;rubygems.org&#x2F;</span><br><span class="line">bundle config mirror.https:&#x2F;&#x2F;rubygems.org https:&#x2F;&#x2F;gems.ruby-china.com</span><br></pre></td></tr></table></figure>
+
 <p>Reference from:</p>
 <ol>
 <li><blockquote><p>Getting Started with Rails</p>
@@ -131,7 +134,7 @@ try <code>rails webpacker:install</code> got<figure class="highlight plain"><tab
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://linhaishen.github.io/2020/03/15/Yay-You%E2%80%99re-on-Rails/" data-id="ck7shcqj20005etu85k43erim" data-title="Yay! You’re on Rails!" class="article-share-link">Share</a>
+      <a data-url="http://linhaishen.github.io/2020/03/15/Yay-You%E2%80%99re-on-Rails/" data-id="ck7shv89j0004gcu85h13epal" data-title="Yay! You’re on Rails!" class="article-share-link">Share</a>
       
       
       
