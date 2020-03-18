@@ -14,6 +14,7 @@ date: 2020-03-15 11:03:00
 rails new blog
 ```
 got stuck during `bundle install` running
+<!--more-->
 ctrl+c exit
 1. Change local gem source and run `bundle install` again
 ```

@@ -9,7 +9,7 @@ date: 2020-03-16 17:35:00
 ---
 # RULES FOR ANY MODE OR MODES OF TRANSPORT
 ## EXW – Ex Works
-“Ex Works” means that the seller delivers when it places the goods at the disposal of the buyer at the seller’s premises or at another named place (i.e., works, factory, warehouse, etc.). The seller does not need to load the goods on any collecting vehicle, nor does it need to clear the goods for export, where such clearance is applicable.
+“Ex Works” means that the seller delivers when it places the goods at the disposal of the buyer at the seller’s premises or at another named place<!--more--> (i.e., works, factory, warehouse, etc.). The seller does not need to load the goods on any collecting vehicle, nor does it need to clear the goods for export, where such clearance is applicable.
 ## FCA – Free Carrier
 “Free Carrier” means that the seller delivers the goods to the carrier or another person nominated by the buyer at the seller’s premises or another named place. The parties are well advised to specify as clearly as possible the point within the named place of delivery, as the risk passes to the buyer at that point.
 ## CPT – Carriage Paid to
