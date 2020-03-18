@@ -1,5 +1,11 @@
 title: LinhaiShen沈林海
 date: 2020-03-08 11:06:41
+categories:
+- resume
+tags:
+- linhaishen
+- profile
+- cv
 ---
 Head of IT | Business Consultant | Supply Chain Specialist
 ---
