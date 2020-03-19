@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>index.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h2 id="title-linhaishen%E6%B2%88%E6%9E%97%E6%B5%B7date-2020-03-08-110641">title: LinhaiShen沈林海
+date: 2020-03-08 11:06:41</h2>
+<h2 id="head-of-it--business-consultant--supply-chain-specialist">Head of IT | Business Consultant | Supply Chain Specialist</h2>
+<p>Born in Shanghai,1981. Graduated from Shanghai Normal University in 2004. Focus on supply chain especially warehouse management since 2005. Confidence in <code>innovation</code> <code>communication</code> <code>logic</code> <code>business model</code>.</p>
+<h2 id="experience">Experience</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">From</th>
+<th style="text-align:center">To</th>
+<th style="text-align:center">Role</th>
+<th style="text-align:left">Company</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">2013.09</td>
+<td style="text-align:center">2020.01</td>
+<td style="text-align:center">Head of IT,BA</td>
+<td style="text-align:left">Swire(VX) Cold Chain Logistics</td>
+</tr>
+<tr>
+<td style="text-align:center">2012.01</td>
+<td style="text-align:center">2013.07</td>
+<td style="text-align:center">Business Consultant</td>
+<td style="text-align:left">RedPrairie</td>
+</tr>
+<tr>
+<td style="text-align:center">2008.05</td>
+<td style="text-align:center">2011.12</td>
+<td style="text-align:center">Consultant,PM</td>
+<td style="text-align:left">partners of INFOR</td>
+</tr>
+<tr>
+<td style="text-align:center">2005.03</td>
+<td style="text-align:center">2008.04</td>
+<td style="text-align:center">IT Manager,Engineer</td>
+<td style="text-align:left">Shanghai Changqiao Logistics</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Industies <code>3PL</code> <code>B2C</code> <strong><code>Cold Chain</code></strong> <code>pharmacy</code> <code>manufacturing</code> <code>books</code></li>
+<li>Customers <strong><code>Zespri</code></strong> <code>Yum</code> <code>Coca-Cola</code> <code>IKEA</code> <code>HAVI</code> <strong><code>Ferrero</code></strong> <code>LambWeston</code> <code>Carrefour</code> <code>Xinhua Books</code> <code>Suzuki-Haojue</code> <code>LaoBaiXing Drugstore</code></li>
+</ul>
+<h2 id="skills">Skills</h2>
+<p><code>Enterprise IT Management</code> <strong><code>Project Management</code></strong> <code>Supply Chain</code> <strong><code>Systems Integration</code></strong> <strong><code>Warehouse Management</code></strong> <code>Product Management</code> <strong><code>WMS Implementation</code></strong> <code>Business Analysis</code> <code>Process Improvement</code> <code>VISO</code> <strong><code>draw.io</code></strong> <strong><code>Redmine</code></strong> <code>JIRA</code> <strong><code>Oracle DB</code></strong> <code>MySQL</code> <code>RedPrairie Dispatcher</code> <code>JDA WM</code> <code>Infor WM9</code> <strong><code>Exceed4000</code></strong> <code>Exceed1000</code> <code>SAP</code> <code>JDE</code> <code>Zebra</code> <code>Honeywell</code> <code>SOTI</code> <code>CentOS</code> <code>Ubuntu</code> <code>VIM</code> <code>git</code></p>
+<h2 id="education">Education</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">From</th>
+<th style="text-align:center">To</th>
+<th style="text-align:center">Major</th>
+<th style="text-align:center">Degree</th>
+<th style="text-align:left">University</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">2000.09</td>
+<td style="text-align:center">2004.06</td>
+<td style="text-align:center">GIS</td>
+<td style="text-align:center">Bacholer</td>
+<td style="text-align:left">Shanghai Normal University</td>
+</tr>
+</tbody>
+</table>
+<h2 id="language">Language</h2>
+<ul>
+<li>Natural <code>Chinese</code> <code>English</code></li>
+<li>Programming <code>C</code> <code>VB</code> <code>PB</code> <code>PLSQL</code> <code>Ruby</code></li>
+</ul>
+<h2 id="non-working-time">Non-working Time</h2>
+<p><strong><code>Be with FAMILY</code></strong> <strong><code>Keep Learning</code></strong> <code>Travelling</code> <code>Photographing</code> <code>Driving</code> <code>Cycling</code> <code>Gaming</code></p>
+
+</body>
+</html>
