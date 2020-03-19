@@ -4,6 +4,41 @@
   
     
     <entry>
+      <title>Install latest git on CentOS from source code</title>
+      <link href="/2020/03/19/Install-latest-git-on-centos-from-source-code/"/>
+      <url>/2020/03/19/Install-latest-git-on-centos-from-source-code/</url>
+      
+        <content type="html"><![CDATA[<ol><li>prepare build tools if tools not ready<a id="more"></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install perl-ExtUtils-CBuilder perl-ExtUtils-MakeMaker</span><br></pre></td></tr></table></figure></li><li>remove old version git<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum remove git</span><br></pre></td></tr></table></figure></li><li>download latest version git from <a href="https://mirrors.edge.kernel.org/pub/software/scm/git/" target="_blank" rel="noopener">https://mirrors.edge.kernel.org/pub/software/scm/git/</a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget https:&#x2F;&#x2F;mirrors.edge.kernel.org&#x2F;pub&#x2F;software&#x2F;scm&#x2F;git&#x2F;git-2.9.5.tar.gz</span><br><span class="line">tar zxvf git-2.9.5.tar.gz</span><br><span class="line">cd git-2.9.5</span><br></pre></td></tr></table></figure></li><li>complie and install<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.&#x2F;configure --prefix&#x3D;&#x2F;usr&#x2F;local&#x2F;git</span><br><span class="line">make</span><br><span class="line">make install</span><br></pre></td></tr></table></figure></li><li>set env path<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo &#39;export PATH&#x3D;$PATH:&#x2F;usr&#x2F;local&#x2F;git&#x2F;bin&#39; &gt;&gt; &#x2F;etc&#x2F;bashrc</span><br><span class="line">source &#x2F;etc&#x2F;bashrc</span><br></pre></td></tr></table></figure></li><li>it’s done, check git version<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure></li></ol><p>Reference from </p><ol><li><a href="https://stackoverflow.com/questions/21820715/how-to-install-latest-version-of-git-on-centos-7-x-6-x" target="_blank" rel="noopener">https://stackoverflow.com/questions/21820715/how-to-install-latest-version-of-git-on-centos-7-x-6-x</a></li><li><a href="https://www.jianshu.com/p/729f4f313642" target="_blank" rel="noopener">https://www.jianshu.com/p/729f4f313642</a></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> git </tag>
+            
+            <tag> make </tag>
+            
+            <tag> compile </tag>
+            
+            <tag> build </tag>
+            
+            <tag> install </tag>
+            
+            <tag> centos </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Incoterms 2010</title>
       <link href="/2020/03/16/Incoterms-2010/"/>
       <url>/2020/03/16/Incoterms-2010/</url>
@@ -126,41 +161,6 @@
             <tag> build </tag>
             
             <tag> install </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Install latest git on CentOS from source code</title>
-      <link href="/2020/03/13/Install-latest-git-on-centos-from-source-code/"/>
-      <url>/2020/03/13/Install-latest-git-on-centos-from-source-code/</url>
-      
-        <content type="html"><![CDATA[<ol><li>prepare build tools if tools not ready<a id="more"></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install perl-ExtUtils-CBuilder perl-ExtUtils-MakeMaker</span><br></pre></td></tr></table></figure></li><li>remove old version git<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum remove git</span><br></pre></td></tr></table></figure></li><li>download latest version git from <a href="https://mirrors.edge.kernel.org/pub/software/scm/git/" target="_blank" rel="noopener">https://mirrors.edge.kernel.org/pub/software/scm/git/</a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget https:&#x2F;&#x2F;mirrors.edge.kernel.org&#x2F;pub&#x2F;software&#x2F;scm&#x2F;git&#x2F;git-2.9.5.tar.gz</span><br><span class="line">tar zxvf git-2.9.5.tar.gz</span><br><span class="line">cd git-2.9.5</span><br></pre></td></tr></table></figure></li><li>complie and install<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.&#x2F;configure --prefix&#x3D;&#x2F;usr&#x2F;local&#x2F;git</span><br><span class="line">make</span><br><span class="line">make install</span><br></pre></td></tr></table></figure></li><li>set env path<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo &#39;export PATH&#x3D;$PATH:&#x2F;usr&#x2F;local&#x2F;git&#x2F;bin&#39; &gt;&gt; &#x2F;etc&#x2F;bashrc</span><br><span class="line">source &#x2F;etc&#x2F;bashrc</span><br></pre></td></tr></table></figure></li><li>it’s done, check git version<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure></li></ol><p>Reference from </p><ol><li><a href="https://stackoverflow.com/questions/21820715/how-to-install-latest-version-of-git-on-centos-7-x-6-x" target="_blank" rel="noopener">https://stackoverflow.com/questions/21820715/how-to-install-latest-version-of-git-on-centos-7-x-6-x</a></li><li><a href="https://www.jianshu.com/p/729f4f313642" target="_blank" rel="noopener">https://www.jianshu.com/p/729f4f313642</a></li></ol>]]></content>
-      
-      
-      <categories>
-          
-          <category> linux </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> git </tag>
-            
-            <tag> make </tag>
-            
-            <tag> compile </tag>
-            
-            <tag> build </tag>
-            
-            <tag> install </tag>
-            
-            <tag> centos </tag>
             
         </tags>
       
