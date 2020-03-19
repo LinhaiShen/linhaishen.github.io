@@ -4,14 +4,24 @@
   <meta charset="utf-8">
   
   
-  <title>Archives | LinhaiShen</title>
+  <title>Install latest git on CentOS from source code | LinhaiShen</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="LinhaiShen">
-<meta property="og:url" content="http://linhaishen.github.io/archives/index.html">
+  <meta name="description" content="prepare build tools if tools not ready">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Install latest git on CentOS from source code">
+<meta property="og:url" content="http://linhaishen.github.io/2020/03/13/Install-latest-git-on-centos-from-source-code/index.html">
 <meta property="og:site_name" content="LinhaiShen">
+<meta property="og:description" content="prepare build tools if tools not ready">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-03-13T02:43:00.000Z">
+<meta property="article:modified_time" content="2020-03-19T06:29:51.113Z">
 <meta property="article:author" content="Linhai Shen">
+<meta property="article:tag" content="git">
+<meta property="article:tag" content="make">
+<meta property="article:tag" content="compile">
+<meta property="article:tag" content="build">
+<meta property="article:tag" content="install">
+<meta property="article:tag" content="centos">
 <meta name="twitter:card" content="summary">
   
   
@@ -70,153 +80,83 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/03/16/Incoterms-2010/" class="archive-article-date">
-  <time class="dt-published" datetime="2020-03-16T09:35:00.000Z" itemprop="datePublished">Mar 16</time>
+        <section id="main"><article id="post-Install-latest-git-on-centos-from-source-code" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2020/03/13/Install-latest-git-on-centos-from-source-code/" class="article-date">
+  <time class="dt-published" datetime="2020-03-13T02:43:00.000Z" itemprop="datePublished">2020-03-13</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/16/Incoterms-2010/">Incoterms 2010</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      Install latest git on CentOS from source code
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/03/15/Yay-You%E2%80%99re-on-Rails/" class="archive-article-date">
-  <time class="dt-published" datetime="2020-03-15T03:03:00.000Z" itemprop="datePublished">Mar 15</time>
-</a>
+    <div class="e-content article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/15/Yay-You%E2%80%99re-on-Rails/">Yay! You’re on Rails!</a>
-    </h1>
-  
+        <ol>
+<li>prepare build tools if tools not ready<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install perl-ExtUtils-CBuilder perl-ExtUtils-MakeMaker</span><br></pre></td></tr></table></figure></li>
+<li>remove old version git<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum remove git</span><br></pre></td></tr></table></figure></li>
+<li>download latest version git from <a href="https://mirrors.edge.kernel.org/pub/software/scm/git/" target="_blank" rel="noopener">https://mirrors.edge.kernel.org/pub/software/scm/git/</a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget https:&#x2F;&#x2F;mirrors.edge.kernel.org&#x2F;pub&#x2F;software&#x2F;scm&#x2F;git&#x2F;git-2.9.5.tar.gz</span><br><span class="line">tar zxvf git-2.9.5.tar.gz</span><br><span class="line">cd git-2.9.5</span><br></pre></td></tr></table></figure></li>
+<li>complie and install<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.&#x2F;configure --prefix&#x3D;&#x2F;usr&#x2F;local&#x2F;git</span><br><span class="line">make</span><br><span class="line">make install</span><br></pre></td></tr></table></figure></li>
+<li>set env path<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo &#39;export PATH&#x3D;$PATH:&#x2F;usr&#x2F;local&#x2F;git&#x2F;bin&#39; &gt;&gt; &#x2F;etc&#x2F;bashrc</span><br><span class="line">source &#x2F;etc&#x2F;bashrc</span><br></pre></td></tr></table></figure></li>
+<li>it’s done, check git version<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/03/14/Install-rails-on-ubuntu/" class="archive-article-date">
-  <time class="dt-published" datetime="2020-03-14T07:39:00.000Z" itemprop="datePublished">Mar 14</time>
-</a>
+</li>
+</ol>
+<p>Reference from </p>
+<ol>
+<li><a href="https://stackoverflow.com/questions/21820715/how-to-install-latest-version-of-git-on-centos-7-x-6-x" target="_blank" rel="noopener">https://stackoverflow.com/questions/21820715/how-to-install-latest-version-of-git-on-centos-7-x-6-x</a></li>
+<li><a href="https://www.jianshu.com/p/729f4f313642" target="_blank" rel="noopener">https://www.jianshu.com/p/729f4f313642</a></li>
+</ol>
+
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/14/Install-rails-on-ubuntu/">Install rails on ubuntu</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/03/13/Install-sqlite3-on-ubuntu-by-compiling-from-source-code/" class="archive-article-date">
-  <time class="dt-published" datetime="2020-03-13T02:43:00.000Z" itemprop="datePublished">Mar 13</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://linhaishen.github.io/2020/03/13/Install-latest-git-on-centos-from-source-code/" data-id="ck7ydp0370000xyu8f10tckic" data-title="Install latest git on CentOS from source code" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/13/Install-sqlite3-on-ubuntu-by-compiling-from-source-code/">Install sqlite3 on ubuntu by compiling from source code</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/03/13/Install-latest-git-on-centos-from-source-code/" class="archive-article-date">
-  <time class="dt-published" datetime="2020-03-13T02:43:00.000Z" itemprop="datePublished">Mar 13</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/13/Install-latest-git-on-centos-from-source-code/">Install latest git on CentOS from source code</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/03/09/Config-redmine-email-smtp-with-outlook-com-mail-service/" class="archive-article-date">
-  <time class="dt-published" datetime="2020-03-09T08:23:00.000Z" itemprop="datePublished">Mar 9</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/09/Config-redmine-email-smtp-with-outlook-com-mail-service/">Config redmine email smtp with outlook.com mail service</a>
-    </h1>
-  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/build/" rel="tag">build</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/centos/" rel="tag">centos</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/compile/" rel="tag">compile</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/install/" rel="tag">install</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/make/" rel="tag">make</a></li></ul>
 
-    </header>
+    </footer>
   </div>
-</article>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/03/08/Synchronize-between-multiple-hexo-bases/" class="archive-article-date">
-  <time class="dt-published" datetime="2020-03-07T23:27:00.000Z" itemprop="datePublished">Mar 8</time>
-</a>
-      
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/08/Synchronize-between-multiple-hexo-bases/">Synchronize between multiple hexo bases</a>
-    </h1>
+    <a href="/2020/03/13/Install-sqlite3-on-ubuntu-by-compiling-from-source-code/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Install sqlite3 on ubuntu by compiling from source code
+        
+      </div>
+    </a>
   
+  
+    <a href="/2020/03/09/Config-redmine-email-smtp-with-outlook-com-mail-service/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Config redmine email smtp with outlook.com mail service</div>
+    </a>
+  
+</nav>
 
-    </header>
-  </div>
+  
 </article>
-  
-  
-    </div></section>
-  
 
 
 </section>
