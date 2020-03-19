@@ -9,7 +9,7 @@ tags:
   - install
 categories:
   - linux
-date: 2020-03-13 10:43:00
+date: 2020-03-19 14:34:00
 ---
 1. prepare build tools if tools not ready
 <!-- more -->
