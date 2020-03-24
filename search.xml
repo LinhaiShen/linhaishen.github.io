@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Add logo / banner to redmine</title>
+      <link href="/2020/03/24/Add-logo-banner-to-redmine/"/>
+      <url>/2020/03/24/Add-logo-banner-to-redmine/</url>
+      
+        <content type="html"><![CDATA[<ol><li>Edit your base.html.erb file, add pic above redmine title<a id="more"></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vim &#123;$redmine-root&#125;&#x2F;app&#x2F;views&#x2F;layouts&#x2F;base.html.erb</span><br><span class="line">&lt;img src&#x3D;&quot;&lt;%&#x3D; Redmine::Utils.relative_url_root %&gt;&#x2F;images&#x2F;logoscts.png&quot; style&#x3D;&quot;margin-top: 15px; margin-left: 15px;&quot;&#x2F;&gt; #line to add</span><br><span class="line">&lt;h1&gt;&lt;%&#x3D; page_header_title %&gt;&lt;&#x2F;h1&gt; #redmine original line</span><br></pre></td></tr></table></figure></li><li>upload you logo / banner pic to the directory, my prefernce is using FileZilla<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;$redmine-root&#125;&#x2F;public&#x2F;images</span><br></pre></td></tr></table></figure>I forgot to “chown the uploaded” pic, but it still works.</li><li>restart your redmine daemon, which I made it as a service<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service redmined restart</span><br></pre></td></tr></table></figure></li><li>check your redmine via browser, it’s done.</li></ol><p>Reference from:</p><blockquote><p>HowTo add a logo to your Redmine banner.</p><footer><strong>redmine, redmine.org</strong><cite><a href="https://redmine.org/projects/redmine/wiki/Howto_add_a_logo_to_your_Redmine_banner" target="_blank" rel="noopener">Redmine banner</a></cite></footer></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> redmine </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> config </tag>
+            
+            <tag> redmine </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Install latest git on CentOS from source code</title>
       <link href="/2020/03/19/Install-latest-git-on-centos-from-source-code/"/>
       <url>/2020/03/19/Install-latest-git-on-centos-from-source-code/</url>
