@@ -14,7 +14,7 @@
 <meta property="og:description" content="Install “Privacy &amp; Terms plugin for Redmine”">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-04-24T03:03:00.000Z">
-<meta property="article:modified_time" content="2020-04-24T06:49:00.173Z">
+<meta property="article:modified_time" content="2020-04-24T06:50:30.998Z">
 <meta property="article:author" content="Linhai Shen">
 <meta property="article:tag" content="redmine">
 <meta property="article:tag" content="terms">
@@ -110,18 +110,11 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd $REDMINE_ROOT</span><br><span class="line">git clone git:&#x2F;&#x2F;github.com&#x2F;alphanodes&#x2F;redmine_privacy_terms.git plugins&#x2F;redmine_privacy_terms</span><br><span class="line">git clone git:&#x2F;&#x2F;github.com&#x2F;alphanodes&#x2F;additionals.git plugins&#x2F;additionals</span><br><span class="line">bundle install --without development test</span><br><span class="line">bundle exec rake redmine:plugins:migrate RAILS_ENV&#x3D;production</span><br></pre></td></tr></table></figure>
 By above codes, you’ve also installed redmine plugin “additionals” which is also very useful.</li>
 <li>Create a project to host wiki page of terms where everyone can access</li>
-<li>Create wiki page of terms, optionally you can create a wiki page for users who reject the terms<blockquote>
-<p>“the two macros <code></code> and <code></code> must be implemented in it.”</p>
-</blockquote>
-</li>
+<li>Create wiki page of terms, optionally you can create a wiki page for users who reject the terms<br>“the two macros <code></code> and <code></code> must be implemented in it.”</li>
 <li>Config <code>/settings/plugin/redmine_privacy_terms?tab=terms</code><br>URL of the wiki with the terms: <code>wiki/</code><br>URL of the wiki for users who reject the terms: external url or a wiki page (didnot work in my setting)<br>tick ‘Enable terms’</li>
 <li>Check result in user profile page <code>/users/user-id</code>, and test accept/reject action.<ul>
-<li>Terms of use</li>
-<li><ul>
+<li>Terms of use<ul>
 <li>Show</li>
-</ul>
-</li>
-<li><ul>
 <li>not acccepted yet</li>
 </ul>
 </li>
