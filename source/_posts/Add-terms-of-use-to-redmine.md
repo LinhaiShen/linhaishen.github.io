@@ -22,7 +22,7 @@ bundle exec rake redmine:plugins:migrate RAILS_ENV=production
 By above codes, you've also installed redmine plugin "additionals" which is also very useful.
 1. Create a project to host wiki page of terms where everyone can access
 1. Create wiki page of terms, optionally you can create a wiki page for users who reject the terms
-> "the two macros `{{terms_accept}}` and `{{terms_reject}}` must be implemented in it."
+> "the two macros "{{terms_accept}}" and "{{terms_reject}}" must be implemented in it."
 1. Config `/settings/plugin/redmine_privacy_terms?tab=terms` 
 URL of the wiki with the terms: `wiki/`
 URL of the wiki for users who reject the terms: external url or a wiki page (didnot work in my setting)
@@ -31,6 +31,7 @@ tick 'Enable terms'
 * Terms of use
     * Show
     * not acccepted yet
+
 1. Optionally you can re-trigger request users to read and accept terms `/settings/plugin/redmine_privacy_terms?tab=tools` 
 It's done!
 
