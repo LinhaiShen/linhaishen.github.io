@@ -44,7 +44,7 @@ $ git init
 $ touch file1.md
 $ git add .
 $ git commit -m 'Initial commit'
-$ git remote add origin git@serverdns:/home/git/repo1
+$ git remote add origin git@server.domain.name:/home/git/repo1
 $ git push origin master
 ```
 It's done.
@@ -52,3 +52,4 @@ It's done.
 
 Reference from:
 1. https://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server
+1. https://www.linux.com/training-tutorials/how-run-your-own-git-server/
