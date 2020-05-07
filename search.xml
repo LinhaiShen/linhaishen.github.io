@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>Telecom ZXHN F420 admin access</title>
+      <link href="/2020/05/07/Telecom-ZXHN-F420-pw/"/>
+      <url>/2020/05/07/Telecom-ZXHN-F420-pw/</url>
+      
+        <content type="html"><![CDATA[<ol><li>Export/downlaod device config.bin via <a href="http://192.168.1.1/manager_dev_config_t.gch" target="_blank" rel="noopener">http://192.168.1.1/manager_dev_config_t.gch</a><a id="more"></a></li><li>Prepare unzip tool <code>offzip</code> via <a href="http://aluigi.altervista.org/mytoolz/offzip.zip" target="_blank" rel="noopener">http://aluigi.altervista.org/mytoolz/offzip.zip</a></li><li>unzip offzip and move config.bin to the same folder</li><li>Use command shell to unzip config.bin<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.&#x2F;offzip -a config.bin .&#x2F; 0</span><br></pre></td></tr></table></figure></li><li>Open <code>000000d8.xml</code> with text editor, find out what you need, it’s done.</li></ol><p>Reference from:<br><a href="https://www.bihell.com/article/85" target="_blank" rel="noopener">https://www.bihell.com/article/85</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> network </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> telecom </tag>
+            
+            <tag> router </tag>
+            
+            <tag> zhongxing </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hosting a GIT server</title>
       <link href="/2020/04/26/Hosting-a-git-server/"/>
       <url>/2020/04/26/Hosting-a-git-server/</url>
