@@ -1,4 +1,4 @@
-title: Enable Non-English Font when export Redmine Gantt PNG
+title: Enable Chinese,Japanese,Korean Font when exporting Redmine Gantt PNG
 tags:
   - config
   - redmine
@@ -24,7 +24,7 @@ Run:
 bundle install
 ```
 
-1. Find out which fonts support non-English Language you expected:
+1. Find out which fonts support CJK Language you expected:
 ```
 fc-list :lang=zh
 ```
