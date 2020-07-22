@@ -12,7 +12,6 @@ date: 2020-07-22 10:00:00
 1. Download and run [Discourse Bitnami Stack VM](https://bitnami.com/stack/discourse/virtual-machine)
 <!-- more -->
 1. Follow [Bitnami Config Docs](https://docs.bitnami.com/installer/apps/discourse/configuration/configure-smtp/)
-
 ```
 smtp_address = "smtp.gmail.com"
 smtp_port = 587
@@ -22,7 +21,6 @@ smtp_password = 'PASSWORD'
 smtp_enable_start_tls = true
 smtp_authentication = login
 ```
-
 1. Make sure Discourse's notification email setting is same as smtp_user_name, otherwise:
 
 ```
