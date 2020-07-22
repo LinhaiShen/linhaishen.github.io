@@ -4,14 +4,22 @@
   <meta charset="utf-8">
   
   
-  <title>Tag: ImageMagick | LinhaiShen</title>
+  <title>Discourse Bitnami Stack email SMTP configration | LinhaiShen</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="LinhaiShen">
-<meta property="og:url" content="http://linhaishen.github.io/tags/ImageMagick/index.html">
+  <meta name="description" content="Download and run Discourse Bitnami Stack VM">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Discourse Bitnami Stack email SMTP configration">
+<meta property="og:url" content="http://linhaishen.github.io/2020/07/22/Discourse-Bitnami-Stack-smtp-config/index.html">
 <meta property="og:site_name" content="LinhaiShen">
+<meta property="og:description" content="Download and run Discourse Bitnami Stack VM">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-07-22T02:00:00.000Z">
+<meta property="article:modified_time" content="2020-07-22T04:02:02.396Z">
 <meta property="article:author" content="Linhai Shen">
+<meta property="article:tag" content="config">
+<meta property="article:tag" content="smtp">
+<meta property="article:tag" content="discourse">
+<meta property="article:tag" content="Bitnami">
 <meta name="twitter:card" content="summary">
   
   
@@ -70,39 +78,76 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/05/27/Redmine-Gantt-PNG-Enable-CJK-Font/" class="archive-article-date">
-  <time class="dt-published" datetime="2020-05-27T07:00:00.000Z" itemprop="datePublished">May 27</time>
+        <section id="main"><article id="post-Discourse-Bitnami-Stack-smtp-config" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2020/07/22/Discourse-Bitnami-Stack-smtp-config/" class="article-date">
+  <time class="dt-published" datetime="2020-07-22T02:00:00.000Z" itemprop="datePublished">2020-07-22</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/discourse/">discourse</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/27/Redmine-Gantt-PNG-Enable-CJK-Font/">Enable Chinese,Japanese,Korean Font when exporting Redmine Gantt PNG</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      Discourse Bitnami Stack email SMTP configration
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <ol>
+<li>Download and run <a href="https://bitnami.com/stack/discourse/virtual-machine" target="_blank" rel="noopener">Discourse Bitnami Stack VM</a><a id="more"></a></li>
+<li>Follow <a href="https://docs.bitnami.com/installer/apps/discourse/configuration/configure-smtp/" target="_blank" rel="noopener">Bitnami Config Docs</a></li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">smtp_address &#x3D; &quot;smtp.gmail.com&quot;</span><br><span class="line">smtp_port &#x3D; 587</span><br><span class="line">smtp_domain &#x3D; example.com</span><br><span class="line">smtp_user_name &#x3D; &#39;USERNAME@gmail.com&#39;</span><br><span class="line">smtp_password &#x3D; &#39;PASSWORD&#39;</span><br><span class="line">smtp_enable_start_tls &#x3D; true</span><br><span class="line">smtp_authentication &#x3D; login</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>Make sure Discourse’s notification email setting is same as smtp_user_name, otherwise:</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">554 5.2.0 STOREDRV.Submission.Exception:SendAsDeniedException.MapiExceptionSendAsDenied; </span><br><span class="line">Failed to process message due to a permanent exception with message Cannot submit message.</span><br></pre></td></tr></table></figure>
+
+<p>That’s it.</p>
+<p>Reference from:</p>
+<ol>
+<li><a href="https://docs.bitnami.com/installer/apps/discourse/configuration/configure-smtp/" target="_blank" rel="noopener">Bitnami Config Docs</a></li>
+<li><a href="https://meta.discourse.org/t/troubleshooting-email-on-a-new-discourse-install/16326/308" target="_blank" rel="noopener">Troubleshooting email on a new Discourse install</a></li>
+<li><a href="https://community.quickfile.co.uk/t/smtp-sender-address-issue/23697" target="_blank" rel="noopener">SMTP Sender Address Issue</a></li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://linhaishen.github.io/2020/07/22/Discourse-Bitnami-Stack-smtp-config/" data-id="ckcwuc0390000ssu8ckts9r2p" data-title="Discourse Bitnami Stack email SMTP configration" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bitnami/" rel="tag">Bitnami</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/config/" rel="tag">config</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/discourse/" rel="tag">discourse</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/smtp/" rel="tag">smtp</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/05/27/Redmine-Gantt-PNG-Enable-CJK-Font/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Enable Chinese,Japanese,Korean Font when exporting Redmine Gantt PNG</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 
 </section>

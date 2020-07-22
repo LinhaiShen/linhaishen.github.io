@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>Discourse Bitnami Stack email SMTP configration</title>
+      <link href="/2020/07/22/Discourse-Bitnami-Stack-smtp-config/"/>
+      <url>/2020/07/22/Discourse-Bitnami-Stack-smtp-config/</url>
+      
+        <content type="html"><![CDATA[<ol><li>Download and run <a href="https://bitnami.com/stack/discourse/virtual-machine" target="_blank" rel="noopener">Discourse Bitnami Stack VM</a><a id="more"></a></li><li>Follow <a href="https://docs.bitnami.com/installer/apps/discourse/configuration/configure-smtp/" target="_blank" rel="noopener">Bitnami Config Docs</a></li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">smtp_address &#x3D; &quot;smtp.gmail.com&quot;</span><br><span class="line">smtp_port &#x3D; 587</span><br><span class="line">smtp_domain &#x3D; example.com</span><br><span class="line">smtp_user_name &#x3D; &#39;USERNAME@gmail.com&#39;</span><br><span class="line">smtp_password &#x3D; &#39;PASSWORD&#39;</span><br><span class="line">smtp_enable_start_tls &#x3D; true</span><br><span class="line">smtp_authentication &#x3D; login</span><br></pre></td></tr></table></figure><ol><li>Make sure Discourse’s notification email setting is same as smtp_user_name, otherwise:</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">554 5.2.0 STOREDRV.Submission.Exception:SendAsDeniedException.MapiExceptionSendAsDenied; </span><br><span class="line">Failed to process message due to a permanent exception with message Cannot submit message.</span><br></pre></td></tr></table></figure><p>That’s it.</p><p>Reference from:</p><ol><li><a href="https://docs.bitnami.com/installer/apps/discourse/configuration/configure-smtp/" target="_blank" rel="noopener">Bitnami Config Docs</a></li><li><a href="https://meta.discourse.org/t/troubleshooting-email-on-a-new-discourse-install/16326/308" target="_blank" rel="noopener">Troubleshooting email on a new Discourse install</a></li><li><a href="https://community.quickfile.co.uk/t/smtp-sender-address-issue/23697" target="_blank" rel="noopener">SMTP Sender Address Issue</a></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> discourse </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> config </tag>
+            
+            <tag> smtp </tag>
+            
+            <tag> discourse </tag>
+            
+            <tag> Bitnami </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Enable Chinese,Japanese,Korean Font when exporting Redmine Gantt PNG</title>
       <link href="/2020/05/27/Redmine-Gantt-PNG-Enable-CJK-Font/"/>
       <url>/2020/05/27/Redmine-Gantt-PNG-Enable-CJK-Font/</url>
