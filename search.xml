@@ -5,8 +5,8 @@
     
     <entry>
       <title>Hide redmine issues&#39; reposts for non-admin users</title>
-      <link href="/2020/09/29/Redmine-hide-issues-reports/"/>
-      <url>/2020/09/29/Redmine-hide-issues-reports/</url>
+      <link href="/2020/09/09/Redmine-hide-issues-reports/"/>
+      <url>/2020/09/09/Redmine-hide-issues-reports/</url>
       
         <content type="html"><![CDATA[<ol><li>Add below lines to app/views/reports/issue_report.html.erb<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;% if User.current.admin? %&gt;</span><br><span class="line">&lt;!--- Original code here ---&gt;</span><br><span class="line">&lt;% end %&gt;</span><br></pre></td></tr></table></figure></li><li>Restart redmine daemon. Done!</li></ol><p>Reference from:</p><ol><li><a href="https://www.redmine.org/boards/1/topics/55197" target="_blank" rel="noopener">https://www.redmine.org/boards/1/topics/55197</a></li></ol>]]></content>
       
