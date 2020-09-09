@@ -6,7 +6,7 @@ tags:
 categories:
   - redmine
 author: Linhai Shen
-date: 2020-09-29 12:00:00
+date: 2020-09-09 12:00:00
 ---
 1. Add below lines to app/views/reports/issue_report.html.erb
 ```
