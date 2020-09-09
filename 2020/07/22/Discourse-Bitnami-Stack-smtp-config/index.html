@@ -14,7 +14,7 @@
 <meta property="og:description" content="Download and run Discourse Bitnami Stack VM">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-07-22T02:00:00.000Z">
-<meta property="article:modified_time" content="2020-07-22T04:04:28.426Z">
+<meta property="article:modified_time" content="2020-07-22T05:46:18.208Z">
 <meta property="article:author" content="Linhai Shen">
 <meta property="article:tag" content="config">
 <meta property="article:tag" content="smtp">
@@ -106,10 +106,7 @@
       
         <ol>
 <li>Download and run <a href="https://bitnami.com/stack/discourse/virtual-machine" target="_blank" rel="noopener">Discourse Bitnami Stack VM</a><a id="more"></a></li>
-<li>Follow <a href="https://docs.bitnami.com/installer/apps/discourse/configuration/configure-smtp/" target="_blank" rel="noopener">Bitnami Config Docs</a></li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">smtp_address &#x3D; &quot;smtp.gmail.com&quot;</span><br><span class="line">smtp_port &#x3D; 587</span><br><span class="line">smtp_domain &#x3D; example.com</span><br><span class="line">smtp_user_name &#x3D; &#39;USERNAME@gmail.com&#39;</span><br><span class="line">smtp_password &#x3D; &#39;PASSWORD&#39;</span><br><span class="line">smtp_enable_start_tls &#x3D; true</span><br><span class="line">smtp_authentication &#x3D; login</span><br></pre></td></tr></table></figure>
-<ol>
+<li>Follow <a href="https://docs.bitnami.com/installer/apps/discourse/configuration/configure-smtp/" target="_blank" rel="noopener">Bitnami Config Docs</a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">smtp_address &#x3D; &quot;smtp.gmail.com&quot;</span><br><span class="line">smtp_port &#x3D; 587</span><br><span class="line">smtp_domain &#x3D; example.com</span><br><span class="line">smtp_user_name &#x3D; &#39;USERNAME@gmail.com&#39;</span><br><span class="line">smtp_password &#x3D; &#39;PASSWORD&#39;</span><br><span class="line">smtp_enable_start_tls &#x3D; true</span><br><span class="line">smtp_authentication &#x3D; login</span><br></pre></td></tr></table></figure></li>
 <li>Make sure Discourse’s notification email setting is same as smtp_user_name, otherwise:</li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">554 5.2.0 STOREDRV.Submission.Exception:SendAsDeniedException.MapiExceptionSendAsDenied; </span><br><span class="line">Failed to process message due to a permanent exception with message Cannot submit message.</span><br></pre></td></tr></table></figure>
@@ -136,6 +133,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2020/09/29/Redmine-hide-issues-reports/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Hide redmine issues&#39; reposts for non-admin users
+        
+      </div>
+    </a>
   
   
     <a href="/2020/05/27/Redmine-Gantt-PNG-Enable-CJK-Font/" id="article-nav-older" class="article-nav-link-wrap">
@@ -167,7 +173,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Bitnami/" style="font-size: 10px;">Bitnami</a> <a href="/tags/CentOS/" style="font-size: 10px;">CentOS</a> <a href="/tags/ImageMagick/" style="font-size: 10px;">ImageMagick</a> <a href="/tags/additionals/" style="font-size: 13.33px;">additionals</a> <a href="/tags/authorization/" style="font-size: 13.33px;">authorization</a> <a href="/tags/branch/" style="font-size: 10px;">branch</a> <a href="/tags/build/" style="font-size: 13.33px;">build</a> <a href="/tags/build-essential/" style="font-size: 10px;">build-essential</a> <a href="/tags/bundle/" style="font-size: 10px;">bundle</a> <a href="/tags/centos/" style="font-size: 10px;">centos</a> <a href="/tags/compile/" style="font-size: 13.33px;">compile</a> <a href="/tags/config/" style="font-size: 20px;">config</a> <a href="/tags/discourse/" style="font-size: 10px;">discourse</a> <a href="/tags/font/" style="font-size: 10px;">font</a> <a href="/tags/gem/" style="font-size: 13.33px;">gem</a> <a href="/tags/git/" style="font-size: 16.67px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/host/" style="font-size: 10px;">host</a> <a href="/tags/incoterms/" style="font-size: 10px;">incoterms</a> <a href="/tags/install/" style="font-size: 13.33px;">install</a> <a href="/tags/logistics/" style="font-size: 10px;">logistics</a> <a href="/tags/make/" style="font-size: 13.33px;">make</a> <a href="/tags/nokogiri/" style="font-size: 10px;">nokogiri</a> <a href="/tags/outlook-com/" style="font-size: 10px;">outlook.com</a> <a href="/tags/plugins/" style="font-size: 10px;">plugins</a> <a href="/tags/rails/" style="font-size: 13.33px;">rails</a> <a href="/tags/redmine/" style="font-size: 20px;">redmine</a> <a href="/tags/router/" style="font-size: 10px;">router</a> <a href="/tags/ruby/" style="font-size: 10px;">ruby</a> <a href="/tags/server/" style="font-size: 10px;">server</a> <a href="/tags/smtp/" style="font-size: 13.33px;">smtp</a> <a href="/tags/sqlite/" style="font-size: 10px;">sqlite</a> <a href="/tags/sqlite3/" style="font-size: 10px;">sqlite3</a> <a href="/tags/telecom/" style="font-size: 10px;">telecom</a> <a href="/tags/terms/" style="font-size: 10px;">terms</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/yarn/" style="font-size: 10px;">yarn</a> <a href="/tags/zhongxing/" style="font-size: 10px;">zhongxing</a> <a href="/tags/zlib/" style="font-size: 10px;">zlib</a>
+      <a href="/tags/Bitnami/" style="font-size: 10px;">Bitnami</a> <a href="/tags/CentOS/" style="font-size: 10px;">CentOS</a> <a href="/tags/ImageMagick/" style="font-size: 10px;">ImageMagick</a> <a href="/tags/additionals/" style="font-size: 12.5px;">additionals</a> <a href="/tags/admin/" style="font-size: 10px;">admin</a> <a href="/tags/authorization/" style="font-size: 12.5px;">authorization</a> <a href="/tags/branch/" style="font-size: 10px;">branch</a> <a href="/tags/build/" style="font-size: 12.5px;">build</a> <a href="/tags/build-essential/" style="font-size: 10px;">build-essential</a> <a href="/tags/bundle/" style="font-size: 10px;">bundle</a> <a href="/tags/centos/" style="font-size: 10px;">centos</a> <a href="/tags/compile/" style="font-size: 12.5px;">compile</a> <a href="/tags/config/" style="font-size: 17.5px;">config</a> <a href="/tags/discourse/" style="font-size: 10px;">discourse</a> <a href="/tags/font/" style="font-size: 10px;">font</a> <a href="/tags/gem/" style="font-size: 12.5px;">gem</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/host/" style="font-size: 10px;">host</a> <a href="/tags/incoterms/" style="font-size: 10px;">incoterms</a> <a href="/tags/install/" style="font-size: 12.5px;">install</a> <a href="/tags/logistics/" style="font-size: 10px;">logistics</a> <a href="/tags/make/" style="font-size: 12.5px;">make</a> <a href="/tags/nokogiri/" style="font-size: 10px;">nokogiri</a> <a href="/tags/outlook-com/" style="font-size: 10px;">outlook.com</a> <a href="/tags/permission/" style="font-size: 10px;">permission</a> <a href="/tags/plugins/" style="font-size: 10px;">plugins</a> <a href="/tags/rails/" style="font-size: 12.5px;">rails</a> <a href="/tags/redmine/" style="font-size: 20px;">redmine</a> <a href="/tags/router/" style="font-size: 10px;">router</a> <a href="/tags/ruby/" style="font-size: 10px;">ruby</a> <a href="/tags/server/" style="font-size: 10px;">server</a> <a href="/tags/smtp/" style="font-size: 12.5px;">smtp</a> <a href="/tags/sqlite/" style="font-size: 10px;">sqlite</a> <a href="/tags/sqlite3/" style="font-size: 10px;">sqlite3</a> <a href="/tags/telecom/" style="font-size: 10px;">telecom</a> <a href="/tags/terms/" style="font-size: 10px;">terms</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/yarn/" style="font-size: 10px;">yarn</a> <a href="/tags/zhongxing/" style="font-size: 10px;">zhongxing</a> <a href="/tags/zlib/" style="font-size: 10px;">zlib</a>
     </div>
   </div>
 
@@ -176,7 +182,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li></ul>
     </div>
   </div>
 
@@ -187,6 +193,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2020/09/29/Redmine-hide-issues-reports/">Hide redmine issues&#39; reposts for non-admin users</a>
+          </li>
         
           <li>
             <a href="/2020/07/22/Discourse-Bitnami-Stack-smtp-config/">Discourse Bitnami Stack email SMTP configration</a>
@@ -202,10 +212,6 @@
         
           <li>
             <a href="/2020/04/26/Hosting-a-git-server/">Hosting a GIT server</a>
-          </li>
-        
-          <li>
-            <a href="/2020/04/24/Add-terms-of-use-to-redmine/">Add terms of use to redmine</a>
           </li>
         
       </ul>
