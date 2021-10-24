@@ -31,6 +31,8 @@ jobs:
           npm install -g hexo-cli@latest --no-cache --no-optional
           git config --global user.email "linhaishen@outlook.com"
           git config --global user.name "LinhaiShen"
+          mkdir -p $HOME/.ssh/
+          echo -e ${{ secrets.PRIVATEKEY }} > $HOME/.ssh/id_rsa
+          sudo chmod 600 $HOME/.ssh/id_rsa
+          export GIT_SSH_COMMAND="ssh -i $HOME/.ssh/id_rsa"
           hexo g -d
-            with:
-            ssh-key: ${{ secrets.PRIVATEKEY }}
