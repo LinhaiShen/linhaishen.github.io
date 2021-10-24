@@ -33,4 +33,4 @@ jobs:
           git config --global user.name "LinhaiShen"
           hexo g -d
             with:
-            ssh-key: ${{ secrets.privatekey }}
+            ssh-key: ${{ secrets.PRIVATEKEY }}
