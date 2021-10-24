@@ -1,7 +1,0 @@
-dokku config:set bookstore DOKKU_SKIP_DEPLOY=true
-
-dokku config:set --no-restart bookstore DOKKU_LETSENCRYPT_EMAIL=linhai.shen@outlook.com
-dokku letsencrypt bookstore 
-dokku letsencrypt:auto-renew bookstore 
-# Cron job to renew certificate every 2 month 
-dokku letsencrypt:cron-job --add bookstore
