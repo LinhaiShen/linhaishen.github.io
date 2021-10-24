@@ -27,5 +27,4 @@ jobs:
           node-version: '14'
       - run: npm install
 
-      - name: deploy
-          hexo g -d
+      - run: hexo g -d
