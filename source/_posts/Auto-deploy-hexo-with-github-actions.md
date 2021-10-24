@@ -1,0 +1,53 @@
+title: Auto deploy hexo with github actions
+tags:
+  - CI
+  - deploy
+  - GithubActions
+categories:
+  - hexo
+author: Linhai Shen
+date: 2021-10-24 14:13:00
+
+```
+# This is a basic workflow to help you get started with Actions
+
+name: auto deploy hexo
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the hexo branch
+  push:
+    branches: [ hexo ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  deploy:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    
+    env:
+      DEPLOYKEY: ${{ secrets.PRIVATEKEY }}
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '12'
+      - run: |
+          rm package-lock.json
+          npm install
+          npm install -g hexo-cli@latest --no-cache --no-optional
+          git config --global user.email "linhaishen@outlook.com"
+          git config --global user.name "LinhaiShen"
+          mkdir -p $HOME/.ssh/
+          echo -e "$DEPLOYKEY" > $HOME/.ssh/id_rsa
+          sudo chmod 600 $HOME/.ssh/id_rsa
+          export GIT_SSH_COMMAND="ssh -i $HOME/.ssh/id_rsa"
+          hexo g -d
+```
