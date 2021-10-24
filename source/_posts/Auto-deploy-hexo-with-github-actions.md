@@ -1,17 +1,13 @@
 title: Auto deploy hexo with github actions
-
 tags:
   - CI
   - deploy
   - GithubActions
-
 categories:
   - hexo
-
 author: Linhai Shen
-
 date: 2021-10-24 14:13:00
-
+---
 ```
 # This is a basic workflow to help you get started with Actions
 
