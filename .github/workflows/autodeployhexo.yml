@@ -28,5 +28,6 @@ jobs:
       - run: |
           rm package-lock.json
           npm install
+          npm rm hexo-cli -g
           npm install hexo-cli@latest --no-cache --no-optional
           hexo g -d
