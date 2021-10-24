@@ -29,4 +29,6 @@ jobs:
           rm package-lock.json
           npm install
           npm install -g hexo-cli@latest --no-cache --no-optional
+          git config --global user.email "linhaishen@outlook.com"
+          git config --global user.name "LinhaiShen"
           hexo g -d
