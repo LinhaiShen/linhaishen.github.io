@@ -14,6 +14,7 @@ Issue when running Github Acitons automerge:
 2021-10-26T00:40:27.014Z INFO  Retrying after 5000 ms ... (1/6)
 ...
 ```
+<!-- more -->
 Github Acitons automerge:
 ```
 name: automerge
