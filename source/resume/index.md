@@ -1,5 +1,5 @@
 title: LinhaiShen沈林海
-date: 2020-01-01 11:06:41
+date: 2021-12-01 11:06:41
 ---
 Head of IT | Business Consultant | Supply Chain Specialist
 ---
@@ -9,6 +9,8 @@ Experience
 ---
 From | To | Role | Company 
 :-:|:-:|:-:|:-
+2020.11|present|Product & Presales| SF Pharma
+2020.01|2020.11|IT Director| Global Freezer Services
 2013.09|2020.01|Head of IT,BA| Swire(VX) Cold Chain Logistics
 2012.01|2013.07|Business Consultant|RedPrairie
 2008.05|2011.12|Consultant,PM|partners of INFOR
