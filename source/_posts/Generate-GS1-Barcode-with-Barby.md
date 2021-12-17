@@ -7,7 +7,7 @@ tags:
   - ruby
 categories:
   - logistics
-date: 2020-12-14 09:00:00
+date: 2021-12-14 09:00:00
 ---
 ```
 gs1 = Barby::Code128.new("#{Barby::Code128::FNC1}0012345")
