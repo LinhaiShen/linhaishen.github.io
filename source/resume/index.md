@@ -3,13 +3,16 @@ date: 2021-12-01 11:06:41
 ---
 Head of IT | Business Consultant | Supply Chain Specialist
 ---
-Born in Shanghai,1981. Graduated from Shanghai Normal University in 2004. Focus on supply chain especially warehouse management since 2005. Confidence in `innovation` `communication` `logic` `business model`.
+Focus on supply chain especially warehouse management since 2005.
+- Connecting business & technology, 
+- Capable of leading & contributing,
+- Speaking Chinese & English.
 
 Experience
 ---
 From | To | Role | Company 
 :-:|:-:|:-:|:-
-2020.11|present|Product & Presales| SF Pharma
+2020.11|2022.02|Product & Presales| SF Pharma
 2020.01|2020.11|IT Director| Global Freezer Services
 2013.09|2020.01|Head of IT,BA| Swire(VX) Cold Chain Logistics
 2012.01|2013.07|Business Consultant|RedPrairie
