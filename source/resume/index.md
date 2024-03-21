@@ -42,3 +42,5 @@ Language
 Non-working Time
 ---
 **`Be with FAMILY`** **`Keep Learning`** `Travelling` `Photographing` `Driving` `Cycling` `Gaming`
+
+Email: linhai.shen@outlook.com
