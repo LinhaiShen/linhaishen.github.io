@@ -1,5 +1,5 @@
 title: LinhaiShen沈林海
-date: 2024-01-22 12:00:00
+date: 2024-09-12 12:00:00
 ---
 Head of IT | Business Consultant | Supply Chain Specialist
 ---
@@ -12,7 +12,7 @@ Experience
 ---
 From | To | Role | Work for 
 :-:|:-:|:-:|:-
-2022.12|Present|Manager of IT Dept.| Changzhou Xinyangguang
+2022.12|Present|Manager of IT Dept.| Changzhou Xinyun Cold Chain
 2022.03|2022.12|Independent Consultant| Clients
 2020.11|2022.02|Product & Presales| SF Pharma
 2020.01|2020.11|IT Director| Global Freezer Services
