@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Install rails on ubuntu | LinhaiShen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Install Ruby and SQLite3 Install Rails with gem">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Install rails on ubuntu">
+<meta property="og:url" content="http://linhaishen.github.io/2020/03/14/Install-rails-on-ubuntu/index.html">
+<meta property="og:site_name" content="LinhaiShen">
+<meta property="og:description" content="Install Ruby and SQLite3 Install Rails with gem">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-03-14T07:39:00.000Z">
+<meta property="article:modified_time" content="2025-09-26T01:26:04.023Z">
+<meta property="article:author" content="Linhai Shen">
+<meta property="article:tag" content="ruby">
+<meta property="article:tag" content="sqlite3">
+<meta property="article:tag" content="rails">
+<meta property="article:tag" content="nokogiri">
+<meta property="article:tag" content="gem">
+<meta property="article:tag" content="zlib">
+<meta name="twitter:card" content="summary">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">LinhaiShen</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">To Learn,To Build.</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/resume/">Resume</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://linhaishen.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Install-rails-on-ubuntu" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2020/03/14/Install-rails-on-ubuntu/" class="article-date">
+  <time class="dt-published" datetime="2020-03-14T07:39:00.000Z" itemprop="datePublished">2020-03-14</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/rails/">rails</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Install rails on ubuntu
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <ol>
+<li>Install Ruby and SQLite3</li>
+<li>Install Rails with gem<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gem install rails</span><br></pre></td></tr></table></figure>
+got below error:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">ERROR:  Error installing rails:</span><br><span class="line">        ERROR: Failed to build gem native extension.</span><br><span class="line"></span><br><span class="line">    current directory: &#x2F;var&#x2F;lib&#x2F;gems&#x2F;2.5.0&#x2F;gems&#x2F;nokogiri-1.10.9&#x2F;ext&#x2F;nokogiri</span><br><span class="line">&#x2F;usr&#x2F;bin&#x2F;ruby2.5 -r .&#x2F;siteconf20200314-38-xxyy88.rb extconf.rb</span><br><span class="line">checking if the C compiler accepts ... yes</span><br><span class="line">Building nokogiri using packaged libraries.</span><br><span class="line">Using mini_portile version 2.4.0</span><br><span class="line">checking for gzdopen() in -lz... no</span><br><span class="line">zlib is missing; necessary for building libxml2</span><br><span class="line">*** extconf.rb failed ***</span><br></pre></td></tr></table></figure>
+After try install nokogiri<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gem install nokogiri</span><br></pre></td></tr></table></figure>
+Error:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">ERROR:  Error installing nokogiri:</span><br><span class="line">        ERROR: Failed to build gem native extension.</span><br><span class="line"></span><br><span class="line">    current directory: &#x2F;var&#x2F;lib&#x2F;gems&#x2F;2.5.0&#x2F;gems&#x2F;nokogiri-1.10.9&#x2F;ext&#x2F;nokogiri</span><br><span class="line">&#x2F;usr&#x2F;bin&#x2F;ruby2.5 -r .&#x2F;siteconf20200314-78-1wo5kzo.rb extconf.rb</span><br><span class="line">checking if the C compiler accepts ... yes</span><br><span class="line">Building nokogiri using packaged libraries.</span><br><span class="line">Using mini_portile version 2.4.0</span><br><span class="line">checking for gzdopen() in -lz... no</span><br><span class="line">zlib is missing; necessary for building libxml2</span><br></pre></td></tr></table></figure>
+checked log and found the cause, install libz-dev and then install nokogiri<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vim &#x2F;var&#x2F;lib&#x2F;gems&#x2F;2.5.0&#x2F;extensions&#x2F;x86_64-linux&#x2F;2.5.0&#x2F;nokogiri-1.10.9&#x2F;mkmf.log</span><br><span class="line">sudo apt-get install libz-dev</span><br><span class="line">sudo gem install nokogiri</span><br></pre></td></tr></table></figure></li>
+<li>try install rails again<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gem install rails</span><br></pre></td></tr></table></figure>
+Check result with <code>rails -v</code>.<br>It’s done.</li>
+</ol>
+<p>Reference from:</p>
+<ol>
+<li><blockquote><p>Getting Started with Rails</p>
+<footer><strong>rubyonrails.org</strong><cite><a href="https://guides.rubyonrails.org/getting_started.html" target="_blank" rel="noopener">guides.rubyonrails.org/getting_started.html</a></cite></footer></blockquote></li>
+<li><blockquote><p>How to fix fatal error: zlib.h: no such file or directory?</p>
+<footer><strong>kenorb</strong><cite><a href="https://stackoverflow.com/questions/36374267/how-to-fix-fatal-error-zlib-h-no-such-file-or-directory" target="_blank" rel="noopener">stackoverflow.com/questions/36374267/how-to-fix-fatal-error-zlib-h-no-such-file-or-directory</a></cite></footer></blockquote></li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://linhaishen.github.io/2020/03/14/Install-rails-on-ubuntu/" data-id="cmg05v8ym000unt3i6gap3feh" data-title="Install rails on ubuntu" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gem/" rel="tag">gem</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nokogiri/" rel="tag">nokogiri</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/rails/" rel="tag">rails</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ruby/" rel="tag">ruby</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sqlite3/" rel="tag">sqlite3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/zlib/" rel="tag">zlib</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/03/15/Yay-You%E2%80%99re-on-Rails/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Yay! You’re on Rails!
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/03/13/Install-sqlite3-on-ubuntu-by-compiling-from-source-code/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Install sqlite3 on ubuntu by compiling from source code</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/discourse/">discourse</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/github/">github</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/logistics/">logistics</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/network/">network</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/rails/">rails</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/redmine/">redmine</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Bitnami/" style="font-size: 10px;">Bitnami</a> <a href="/tags/CI/" style="font-size: 12.5px;">CI</a> <a href="/tags/CentOS/" style="font-size: 10px;">CentOS</a> <a href="/tags/GS1/" style="font-size: 10px;">GS1</a> <a href="/tags/GithubActions/" style="font-size: 12.5px;">GithubActions</a> <a href="/tags/ImageMagick/" style="font-size: 10px;">ImageMagick</a> <a href="/tags/PullRequest/" style="font-size: 10px;">PullRequest</a> <a href="/tags/additionals/" style="font-size: 12.5px;">additionals</a> <a href="/tags/admin/" style="font-size: 10px;">admin</a> <a href="/tags/authorization/" style="font-size: 12.5px;">authorization</a> <a href="/tags/barcode/" style="font-size: 10px;">barcode</a> <a href="/tags/branch/" style="font-size: 10px;">branch</a> <a href="/tags/build/" style="font-size: 12.5px;">build</a> <a href="/tags/build-essential/" style="font-size: 10px;">build-essential</a> <a href="/tags/bundle/" style="font-size: 10px;">bundle</a> <a href="/tags/centos/" style="font-size: 10px;">centos</a> <a href="/tags/compile/" style="font-size: 12.5px;">compile</a> <a href="/tags/config/" style="font-size: 17.5px;">config</a> <a href="/tags/deploy/" style="font-size: 10px;">deploy</a> <a href="/tags/discourse/" style="font-size: 10px;">discourse</a> <a href="/tags/font/" style="font-size: 10px;">font</a> <a href="/tags/gem/" style="font-size: 12.5px;">gem</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/host/" style="font-size: 10px;">host</a> <a href="/tags/incoterms/" style="font-size: 10px;">incoterms</a> <a href="/tags/install/" style="font-size: 12.5px;">install</a> <a href="/tags/logistics/" style="font-size: 15px;">logistics</a> <a href="/tags/make/" style="font-size: 12.5px;">make</a> <a href="/tags/nokogiri/" style="font-size: 10px;">nokogiri</a> <a href="/tags/outlook-com/" style="font-size: 10px;">outlook.com</a> <a href="/tags/pallet/" style="font-size: 10px;">pallet</a> <a href="/tags/permission/" style="font-size: 10px;">permission</a> <a href="/tags/plugins/" style="font-size: 10px;">plugins</a> <a href="/tags/rack/" style="font-size: 10px;">rack</a> <a href="/tags/rails/" style="font-size: 12.5px;">rails</a> <a href="/tags/redmine/" style="font-size: 20px;">redmine</a> <a href="/tags/router/" style="font-size: 10px;">router</a> <a href="/tags/ruby/" style="font-size: 12.5px;">ruby</a> <a href="/tags/server/" style="font-size: 10px;">server</a> <a href="/tags/smtp/" style="font-size: 12.5px;">smtp</a> <a href="/tags/sqlite/" style="font-size: 10px;">sqlite</a> <a href="/tags/sqlite3/" style="font-size: 10px;">sqlite3</a> <a href="/tags/telecom/" style="font-size: 10px;">telecom</a> <a href="/tags/terms/" style="font-size: 10px;">terms</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/warehouse/" style="font-size: 10px;">warehouse</a> <a href="/tags/yarn/" style="font-size: 10px;">yarn</a> <a href="/tags/zhongxing/" style="font-size: 10px;">zhongxing</a> <a href="/tags/zlib/" style="font-size: 10px;">zlib</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">December 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/01/21/Warehouse-Rack-Types/">Warehouse Rack Types</a>
+          </li>
+        
+          <li>
+            <a href="/2021/12/14/Generate-GS1-Barcode-with-Barby/">Generate GS1 Barcode with Barby</a>
+          </li>
+        
+          <li>
+            <a href="/2021/10/26/Fixing-github-actions-automerge-with-pull-request-target-event/">Fixing Github Actions automerge with pull_request_target event</a>
+          </li>
+        
+          <li>
+            <a href="/2021/10/24/Auto-deploy-hexo-with-github-actions/">Auto deploy hexo with github actions</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/09/Redmine-hide-issues-reports/">Hide redmine issues&#39; reposts for non-admin users</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2025 Linhai Shen<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/resume/" class="mobile-nav-link">Resume</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
