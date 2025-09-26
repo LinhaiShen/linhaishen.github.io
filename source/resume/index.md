@@ -10,16 +10,17 @@ Focus on supply chain especially warehouse management since 2005.
 
 Experience
 ---
-From | To | Role | Work for 
-:-:|:-:|:-:|:-
-2022.12|Present|Manager of IT Dept.| Changzhou Xinyun Cold Chain
-2022.03|2022.12|Independent Consultant| Clients
-2020.11|2022.02|Product & Presales| SF Pharma
-2020.01|2020.11|IT Director| Global Freezer Services
-2013.09|2020.01|Head of IT,BA| Swire(VX) Cold Chain Logistics
-2012.01|2013.07|Business Consultant|RedPrairie
-2008.05|2011.12|Consultant,PM|partners of INFOR
-2005.03|2008.04|IT Manager,Engineer|Shanghai Changqiao Logistics
+From | To | Role | Work for | Location
+:-:|:-:|:-:|:-|:-
+2025.03|Present|Lead, Logistic Product Management| FairPrice Group | Singapore
+2022.12|2025.03|Manager of IT Dept.| Changzhou Xinyun Cold Chain | Changzhou
+2022.03|2022.12|Independent Consultant| Clients | Shanghai
+2020.11|2022.02|Product & Presales| SF Pharma | Shanghai
+2020.01|2020.11|IT Director| Global Freezer Services | Shanghai
+2013.09|2020.01|Head of IT,BA| Swire(VX) Cold Chain Logistics | Shanghai
+2012.01|2013.07|Business Consultant|RedPrairie (JDA, Blue Yonder) | Shanghai
+2008.05|2011.12|Consultant,PM|partners of INFOR | Shanghai
+2005.03|2008.04|IT Manager,Engineer|Shanghai Changqiao Logistics | Shanghai
 
 - Industies `3PL` `B2C` **`Cold Chain`** `pharmacy` `manufacturing` `books`
 - Customers **`Zespri`** `Yum` `Coca-Cola` `IKEA` `HAVI` **`Ferrero`** `LambWeston` `Carrefour` `Xinhua Books` `Suzuki-Haojue` `LaoBaiXing Drugstore`
