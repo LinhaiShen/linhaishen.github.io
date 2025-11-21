@@ -1,18 +1,18 @@
 title: LinhaiShen沈林海
-date: 2024-09-12 12:00:00
+date: 2025-11-21 12:00:00
 ---
 Head of IT | Business Consultant | Supply Chain Specialist
 ---
 Focus on supply chain especially warehouse management since 2005.
 - Connecting business & technology, 
-- Capable of leading & contributing,
+- Capable to lead & contribute,
 - Speaking Chinese & English.
 
 Experience
 ---
 From | To | Role | Work for | Location
 :-:|:-:|:-:|:-|:-
-2025.03|Present|Lead, Logistic Product Management| FairPrice Group | Singapore
+2025.03|2025.10|Lead, Logistic Product Management| FairPrice Group | Singapore
 2022.12|2025.03|Manager of IT Dept.| Changzhou Xinyun Cold Chain | Changzhou
 2022.03|2022.12|Independent Consultant| Clients | Shanghai
 2020.11|2022.02|Product & Presales| SF Pharma | Shanghai
