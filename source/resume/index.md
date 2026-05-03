@@ -1,7 +1,7 @@
 title: LinhaiShen沈林海
-date: 2025-11-21 12:00:00
+date: 2026-05-03 12:00:00
 ---
-Head of IT | Business Consultant | Supply Chain Specialist
+SaaS Provider | IT x Supply Chain Specialist
 ---
 Focus on supply chain especially warehouse management since 2005.
 - Connecting business & technology, 
@@ -12,6 +12,7 @@ Experience
 ---
 From | To | Role | Work for | Location
 :-:|:-:|:-:|:-|:-
+2025.10|Present|Independent SaaS Engineer| Clients | Shanghai
 2025.03|2025.10|Lead, Logistic Product Management| FairPrice Group | Singapore
 2022.12|2025.03|Manager of IT Dept.| Changzhou Xinyun Cold Chain | Changzhou
 2022.03|2022.12|Independent Consultant| Clients | Shanghai
