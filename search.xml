@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Warehouse Rack Types</title>
+      <link href="/2022/01/21/Warehouse-Rack-Types/"/>
+      <url>/2022/01/21/Warehouse-Rack-Types/</url>
+      
+        <content type="html"><![CDATA[<ul><li>selective</li><li>double deep</li><li>push back (FILO with single side retrieving)</li><li>gravity flow (FIFO with double sides retrieving)</li><li>drive-in / drive-thru</li></ul><p>Reference from:</p><ol><li><a href="https://www.tmhnc.com/blog/common-types-of-pallet-racking-to-increase-warehouse-storage" target="_blank" rel="noopener">https://www.tmhnc.com/blog/common-types-of-pallet-racking-to-increase-warehouse-storage</a></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> logistics </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> logistics </tag>
+            
+            <tag> warehouse </tag>
+            
+            <tag> rack </tag>
+            
+            <tag> pallet </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Generate GS1 Barcode with Barby</title>
+      <link href="/2021/12/14/Generate-GS1-Barcode-with-Barby/"/>
+      <url>/2021/12/14/Generate-GS1-Barcode-with-Barby/</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gs1 &#x3D; Barby::Code128.new(&quot;#&#123;Barby::Code128::FNC1&#125;0012345&quot;)</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> logistics </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> logistics </tag>
+            
+            <tag> GS1 </tag>
+            
+            <tag> barcode </tag>
+            
+            <tag> ruby </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Fixing Github Actions automerge with pull_request_target event</title>
+      <link href="/2021/10/26/Fixing-github-actions-automerge-with-pull-request-target-event/"/>
+      <url>/2021/10/26/Fixing-github-actions-automerge-with-pull-request-target-event/</url>
+      
+        <content type="html"><![CDATA[<p>Issue when running Github Acitons automerge:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">2021-10-26T00:40:27.014Z INFO  Failed to merge PR: Resource not accessible by integration</span><br><span class="line">2021-10-26T00:40:27.014Z INFO  Retrying after 5000 ms ... (1&#x2F;6)</span><br><span class="line">...</span><br></pre></td></tr></table></figure><a id="more"></a><p>Github Acitons automerge:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">name: automerge</span><br><span class="line">on:</span><br><span class="line">  pull_request:</span><br><span class="line">    types:</span><br><span class="line">      - labeled</span><br><span class="line">...</span><br></pre></td></tr></table></figure><p>Fixing:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">name: automerge</span><br><span class="line">on:</span><br><span class="line">  pull_request_target:</span><br><span class="line">    types:</span><br><span class="line">      - labeled</span><br><span class="line">...</span><br></pre></td></tr></table></figure><p>Referenced from:</p><ol><li><a href="https://github.community/t/how-to-auto-merge-pr-from-fork/132552/5" target="_blank" rel="noopener">https://github.community/t/how-to-auto-merge-pr-from-fork/132552/5</a></li><li><a href="https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-workflows#pull_request_target" target="_blank" rel="noopener">https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-workflows#pull_request_target</a></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> github </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CI </tag>
+            
+            <tag> GithubActions </tag>
+            
+            <tag> PullRequest </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Auto deploy hexo with github actions</title>
+      <link href="/2021/10/24/Auto-deploy-hexo-with-github-actions/"/>
+      <url>/2021/10/24/Auto-deploy-hexo-with-github-actions/</url>
+      
+        <content type="html"><![CDATA[<p>Actions yml:</p><a id="more"></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"># This is a basic workflow to help you get started with Actions</span><br><span class="line"></span><br><span class="line">name: auto deploy hexo</span><br><span class="line"></span><br><span class="line"># Controls when the workflow will run</span><br><span class="line">on:</span><br><span class="line">  # Triggers the workflow on push or pull request events but only for the hexo branch</span><br><span class="line">  push:</span><br><span class="line">    branches: [ hexo ]</span><br><span class="line"></span><br><span class="line">  # Allows you to run this workflow manually from the Actions tab</span><br><span class="line">  workflow_dispatch:</span><br><span class="line"></span><br><span class="line"># A workflow run is made up of one or more jobs that can run sequentially or in parallel</span><br><span class="line">jobs:</span><br><span class="line">  # This workflow contains a single job called &quot;build&quot;</span><br><span class="line">  deploy:</span><br><span class="line">    # The type of runner that the job will run on</span><br><span class="line">    runs-on: ubuntu-latest</span><br><span class="line">    </span><br><span class="line">    env:</span><br><span class="line">      DEPLOYKEY: $&#123;&#123; secrets.PRIVATEKEY &#125;&#125;</span><br><span class="line"></span><br><span class="line">    # Steps represent a sequence of tasks that will be executed as part of the job</span><br><span class="line">    steps:</span><br><span class="line">      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it</span><br><span class="line">      - uses: actions&#x2F;checkout@v2</span><br><span class="line">      - uses: actions&#x2F;setup-node@v2</span><br><span class="line">        with:</span><br><span class="line">          node-version: &#39;12&#39;</span><br><span class="line">      - run: |</span><br><span class="line">          rm package-lock.json</span><br><span class="line">          npm install</span><br><span class="line">          npm install -g hexo-cli@latest --no-cache --no-optional</span><br><span class="line">          git config --global user.email &quot;linhaishen@outlook.com&quot;</span><br><span class="line">          git config --global user.name &quot;LinhaiShen&quot;</span><br><span class="line">          mkdir -p $HOME&#x2F;.ssh&#x2F;</span><br><span class="line">          echo -e &quot;$DEPLOYKEY&quot; &gt; $HOME&#x2F;.ssh&#x2F;id_rsa</span><br><span class="line">          sudo chmod 600 $HOME&#x2F;.ssh&#x2F;id_rsa</span><br><span class="line">          export GIT_SSH_COMMAND&#x3D;&quot;ssh -i $HOME&#x2F;.ssh&#x2F;id_rsa&quot;</span><br><span class="line">          hexo g -d</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CI </tag>
+            
+            <tag> deploy </tag>
+            
+            <tag> GithubActions </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hide redmine issues&#39; reposts for non-admin users</title>
+      <link href="/2020/09/09/Redmine-hide-issues-reports/"/>
+      <url>/2020/09/09/Redmine-hide-issues-reports/</url>
+      
+        <content type="html"><![CDATA[<ol><li>Add below lines to app/views/reports/issue_report.html.erb<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;% if User.current.admin? %&gt;</span><br><span class="line">&lt;!--- Original code here ---&gt;</span><br><span class="line">&lt;% end %&gt;</span><br></pre></td></tr></table></figure></li><li>Restart redmine daemon. Done!</li></ol><p>Reference from:</p><ol><li><a href="https://www.redmine.org/boards/1/topics/55197" target="_blank" rel="noopener">https://www.redmine.org/boards/1/topics/55197</a></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> redmine </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> redmine </tag>
+            
+            <tag> permission </tag>
+            
+            <tag> admin </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Discourse Bitnami Stack email SMTP configration</title>
+      <link href="/2020/07/22/Discourse-Bitnami-Stack-smtp-config/"/>
+      <url>/2020/07/22/Discourse-Bitnami-Stack-smtp-config/</url>
+      
+        <content type="html"><![CDATA[<ol><li>Download and run <a href="https://bitnami.com/stack/discourse/virtual-machine" target="_blank" rel="noopener">Discourse Bitnami Stack VM</a><a id="more"></a></li><li>Follow <a href="https://docs.bitnami.com/installer/apps/discourse/configuration/configure-smtp/" target="_blank" rel="noopener">Bitnami Config Docs</a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">smtp_address &#x3D; &quot;smtp.gmail.com&quot;</span><br><span class="line">smtp_port &#x3D; 587</span><br><span class="line">smtp_domain &#x3D; example.com</span><br><span class="line">smtp_user_name &#x3D; &#39;USERNAME@gmail.com&#39;</span><br><span class="line">smtp_password &#x3D; &#39;PASSWORD&#39;</span><br><span class="line">smtp_enable_start_tls &#x3D; true</span><br><span class="line">smtp_authentication &#x3D; login</span><br></pre></td></tr></table></figure></li><li>Make sure Discourse’s notification email setting is same as smtp_user_name, otherwise:</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">554 5.2.0 STOREDRV.Submission.Exception:SendAsDeniedException.MapiExceptionSendAsDenied; </span><br><span class="line">Failed to process message due to a permanent exception with message Cannot submit message.</span><br></pre></td></tr></table></figure><p>That’s it.</p><p>Reference from:</p><ol><li><a href="https://docs.bitnami.com/installer/apps/discourse/configuration/configure-smtp/" target="_blank" rel="noopener">Bitnami Config Docs</a></li><li><a href="https://meta.discourse.org/t/troubleshooting-email-on-a-new-discourse-install/16326/308" target="_blank" rel="noopener">Troubleshooting email on a new Discourse install</a></li><li><a href="https://community.quickfile.co.uk/t/smtp-sender-address-issue/23697" target="_blank" rel="noopener">SMTP Sender Address Issue</a></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> discourse </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> config </tag>
+            
+            <tag> smtp </tag>
+            
+            <tag> discourse </tag>
+            
+            <tag> Bitnami </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Enable Chinese,Japanese,Korean Font when exporting Redmine Gantt PNG</title>
+      <link href="/2020/05/27/Redmine-Gantt-PNG-Enable-CJK-Font/"/>
+      <url>/2020/05/27/Redmine-Gantt-PNG-Enable-CJK-Font/</url>
+      
+        <content type="html"><![CDATA[<ol><li><p>Install ImageMagick</p><a id="more"></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install ImageMagick ImageMagick-devel</span><br></pre></td></tr></table></figure></li><li><p>Gem install rmagick<br>Gemfile:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gem &#39;rmagick&#39;, &#39;~&gt; 2.15&#39;, &#39;&gt;&#x3D; 2.15.4&#39;</span><br></pre></td></tr></table></figure><p>Run:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bundle install</span><br></pre></td></tr></table></figure></li><li><p>Find out which fonts support CJK Language you expected:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fc-list :lang&#x3D;zh</span><br></pre></td></tr></table></figure></li><li><p>Add the font path to config/configuration.yml</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">minimagick_font_path: &#x2F;usr&#x2F;share&#x2F;fonts&#x2F;wqy-microhei&#x2F;wqy-microhei.ttc</span><br></pre></td></tr></table></figure></li><li><p>Restart your redmine, It’s done!</p></li><li><p>BONUS<br>user-profile set to English, export pdf in CJK<br>modify config/locales/en.yml</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#general_csv_encoding: ISO-8859-1</span><br><span class="line">general_csv_encoding: UTF-8</span><br><span class="line">#general_pdf_fontname: freesans</span><br><span class="line">general_pdf_fontname: stsongstdlight</span><br></pre></td></tr></table></figure></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> redmine </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> config </tag>
+            
+            <tag> redmine </tag>
+            
+            <tag> ImageMagick </tag>
+            
+            <tag> CentOS </tag>
+            
+            <tag> font </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Telecom ZXHN F420 admin access</title>
+      <link href="/2020/05/07/Telecom-ZXHN-F420-pw/"/>
+      <url>/2020/05/07/Telecom-ZXHN-F420-pw/</url>
+      
+        <content type="html"><![CDATA[<ol><li>Export/downlaod device config.bin via <a href="http://192.168.1.1/manager_dev_config_t.gch" target="_blank" rel="noopener">http://192.168.1.1/manager_dev_config_t.gch</a><a id="more"></a></li><li>Prepare unzip tool <code>offzip</code> via <a href="http://aluigi.altervista.org/mytoolz/offzip.zip" target="_blank" rel="noopener">http://aluigi.altervista.org/mytoolz/offzip.zip</a></li><li>unzip offzip and move config.bin to the same folder</li><li>Use command shell to unzip config.bin<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.&#x2F;offzip -a config.bin .&#x2F; 0</span><br></pre></td></tr></table></figure></li><li>Open <code>000000d8.xml</code> with text editor, find out what you need, it’s done.</li></ol><p>Reference from:<br><a href="https://www.bihell.com/article/85" target="_blank" rel="noopener">https://www.bihell.com/article/85</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> network </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> telecom </tag>
+            
+            <tag> router </tag>
+            
+            <tag> zhongxing </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hosting a GIT server</title>
+      <link href="/2020/04/26/Hosting-a-git-server/"/>
+      <url>/2020/04/26/Hosting-a-git-server/</url>
+      
+        <content type="html"><![CDATA[<ol><li>Install git on the server<br>see detail steps <a href="https://linhaishen.github.io/2020/03/19/Install-latest-git-on-centos-from-source-code/">here</a> <a id="more"></a></li><li>First, you create a git user account and a .ssh directory for that user.<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ sudo adduser git</span><br><span class="line">$ su git</span><br><span class="line">$ cd</span><br><span class="line">$ mkdir .ssh &amp;&amp; chmod 700 .ssh</span><br><span class="line">$ touch .ssh&#x2F;authorized_keys &amp;&amp; chmod 600 .ssh&#x2F;authorized_keys</span><br></pre></td></tr></table></figure>Next, you need to add some developer SSH public keys to the authorized_keys file for the git user. Let’s assume you have some trusted public keys and have saved them to temporary files.<br>You just append them to the git user’s authorized_keys file in its .ssh directory:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ cat &#x2F;tmp&#x2F;id_rsa.john.pub &gt;&gt; ~&#x2F;.ssh&#x2F;authorized_keys</span><br><span class="line">$ cat &#x2F;tmp&#x2F;id_rsa.josie.pub &gt;&gt; ~&#x2F;.ssh&#x2F;authorized_keys</span><br><span class="line">$ cat &#x2F;tmp&#x2F;id_rsa.jessica.pub &gt;&gt; ~&#x2F;.ssh&#x2F;authorized_keys</span><br></pre></td></tr></table></figure></li><li>Now, you can set up an empty repository for them by running git init with the –bare option, which initializes the repository without a working directory:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ cd</span><br><span class="line">$ mkdir repo1</span><br><span class="line">$ cd repo1</span><br><span class="line">$ git init --bare</span><br><span class="line">Initialized empty Git repository in &#x2F;home&#x2F;git&#x2F;repo1&#x2F;</span><br></pre></td></tr></table></figure></li><li>Then, John, Josie, or Jessica can push the first version of their project into that repository by adding it as a remote and pushing up a branch. Note that someone must shell onto the machine and create a bare repository every time you want to add a project. Let’s use gitserver as the hostname of the server on which you’ve set up your git user and repository. If you’re running it internally, and you set up DNS for gitserver to point to that server, then you can use the commands pretty much as is (assuming that myproject is an existing project with files in it):<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># on John&#39;s computer</span><br><span class="line">$ mkdir repo1</span><br><span class="line">$ git init</span><br><span class="line">$ touch file1.md</span><br><span class="line">$ git add .</span><br><span class="line">$ git commit -m &#39;Initial commit&#39;</span><br><span class="line">$ git remote add origin git@server.domain.name:&#x2F;home&#x2F;git&#x2F;repo1</span><br><span class="line">$ git push origin master</span><br></pre></td></tr></table></figure>It’s done.</li></ol><p>Reference from:</p><ol><li><a href="https://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server" target="_blank" rel="noopener">https://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server</a></li><li><a href="https://www.linux.com/training-tutorials/how-run-your-own-git-server/" target="_blank" rel="noopener">https://www.linux.com/training-tutorials/how-run-your-own-git-server/</a></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> authorization </tag>
+            
+            <tag> additionals </tag>
+            
+            <tag> git </tag>
+            
+            <tag> server </tag>
+            
+            <tag> host </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Add terms of use to redmine</title>
+      <link href="/2020/04/24/Add-terms-of-use-to-redmine/"/>
+      <url>/2020/04/24/Add-terms-of-use-to-redmine/</url>
+      
+        <content type="html"><![CDATA[<ol><li>Install “Privacy &amp; Terms plugin for Redmine” <a id="more"></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd $REDMINE_ROOT</span><br><span class="line">git clone git:&#x2F;&#x2F;github.com&#x2F;alphanodes&#x2F;redmine_privacy_terms.git plugins&#x2F;redmine_privacy_terms</span><br><span class="line">git clone git:&#x2F;&#x2F;github.com&#x2F;alphanodes&#x2F;additionals.git plugins&#x2F;additionals</span><br><span class="line">bundle install --without development test</span><br><span class="line">bundle exec rake redmine:plugins:migrate RAILS_ENV&#x3D;production</span><br></pre></td></tr></table></figure>By above codes, you’ve also installed redmine plugin “additionals” which is also very useful.</li><li>Create a project to host wiki page of terms where everyone can access</li><li>Create wiki page of terms, optionally you can create a wiki page for users who reject the terms<br>“the two macros must be implemented in it.”<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;terms_accept&#125;&#125;</span><br><span class="line">&#123;&#123;terms_reject&#125;&#125;</span><br></pre></td></tr></table></figure></li><li>Config <code>/settings/plugin/redmine_privacy_terms?tab=terms</code><br>URL of the wiki with the terms: <code>wiki/</code><br>URL of the wiki for users who reject the terms: external url or a wiki page (didnot work in my setting)<br>tick ‘Enable terms’</li><li>Check result in user profile page <code>/users/user-id</code>, and test accept/reject action.<ul><li>Terms of use<ul><li>Show</li><li>not acccepted yet</li></ul></li></ul></li><li>Optionally you can re-trigger request users to read and accept terms <code>/settings/plugin/redmine_privacy_terms?tab=tools</code><br>It’s done!</li></ol><p>Referenced from:</p><ol><li><a href="https://github.com/AlphaNodes/redmine_privacy_terms/blob/master/README.md" target="_blank" rel="noopener">https://github.com/AlphaNodes/redmine_privacy_terms/blob/master/README.md</a></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> redmine </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> redmine </tag>
+            
+            <tag> terms </tag>
+            
+            <tag> authorization </tag>
+            
+            <tag> plugins </tag>
+            
+            <tag> additionals </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Add logo / banner to redmine</title>
+      <link href="/2020/03/24/Add-logo-banner-to-redmine/"/>
+      <url>/2020/03/24/Add-logo-banner-to-redmine/</url>
+      
+        <content type="html"><![CDATA[<ol><li>Edit your base.html.erb file, add pic above redmine title<a id="more"></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vim &#123;$redmine-root&#125;&#x2F;app&#x2F;views&#x2F;layouts&#x2F;base.html.erb</span><br><span class="line">&lt;img src&#x3D;&quot;&lt;%&#x3D; Redmine::Utils.relative_url_root %&gt;&#x2F;images&#x2F;logoscts.png&quot; style&#x3D;&quot;margin-top: 15px; margin-left: 15px;&quot;&#x2F;&gt; #line to add</span><br><span class="line">&lt;h1&gt;&lt;%&#x3D; page_header_title %&gt;&lt;&#x2F;h1&gt; #redmine original line</span><br></pre></td></tr></table></figure></li><li>upload you logo / banner pic to the directory, my prefernce is using FileZilla<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;$redmine-root&#125;&#x2F;public&#x2F;images</span><br></pre></td></tr></table></figure>I forgot to “chown the uploaded” pic, but it still works.</li><li>restart your redmine daemon, which I made it as a service<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service redmined restart</span><br></pre></td></tr></table></figure></li><li>check your redmine via browser, it’s done.</li></ol><p>Reference from:</p><blockquote><p>HowTo add a logo to your Redmine banner.</p><footer><strong>redmine, redmine.org</strong><cite><a href="https://redmine.org/projects/redmine/wiki/Howto_add_a_logo_to_your_Redmine_banner" target="_blank" rel="noopener">Redmine banner</a></cite></footer></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> redmine </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> config </tag>
+            
+            <tag> redmine </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Install latest git on CentOS from source code</title>
+      <link href="/2020/03/19/Install-latest-git-on-centos-from-source-code/"/>
+      <url>/2020/03/19/Install-latest-git-on-centos-from-source-code/</url>
+      
+        <content type="html"><![CDATA[<ol><li>prepare build tools if tools not ready<a id="more"></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install perl-ExtUtils-CBuilder perl-ExtUtils-MakeMaker</span><br></pre></td></tr></table></figure></li><li>remove old version git<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum remove git</span><br></pre></td></tr></table></figure></li><li>download latest version git from <a href="https://mirrors.edge.kernel.org/pub/software/scm/git/" target="_blank" rel="noopener">https://mirrors.edge.kernel.org/pub/software/scm/git/</a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget https:&#x2F;&#x2F;mirrors.edge.kernel.org&#x2F;pub&#x2F;software&#x2F;scm&#x2F;git&#x2F;git-2.9.5.tar.gz</span><br><span class="line">tar zxvf git-2.9.5.tar.gz</span><br><span class="line">cd git-2.9.5</span><br></pre></td></tr></table></figure></li><li>complie and install<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.&#x2F;configure --prefix&#x3D;&#x2F;usr&#x2F;local&#x2F;git</span><br><span class="line">make</span><br><span class="line">make install</span><br></pre></td></tr></table></figure></li><li>set env path<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo &#39;export PATH&#x3D;$PATH:&#x2F;usr&#x2F;local&#x2F;git&#x2F;bin&#39; &gt;&gt; &#x2F;etc&#x2F;bashrc</span><br><span class="line">source &#x2F;etc&#x2F;bashrc</span><br></pre></td></tr></table></figure></li><li>it’s done, check git version<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure></li></ol><p>Reference from </p><ol><li><a href="https://stackoverflow.com/questions/21820715/how-to-install-latest-version-of-git-on-centos-7-x-6-x" target="_blank" rel="noopener">https://stackoverflow.com/questions/21820715/how-to-install-latest-version-of-git-on-centos-7-x-6-x</a></li><li><a href="https://www.jianshu.com/p/729f4f313642" target="_blank" rel="noopener">https://www.jianshu.com/p/729f4f313642</a></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> git </tag>
+            
+            <tag> centos </tag>
+            
+            <tag> make </tag>
+            
+            <tag> compile </tag>
+            
+            <tag> build </tag>
+            
+            <tag> install </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Incoterms 2010</title>
+      <link href="/2020/03/16/Incoterms-2010/"/>
+      <url>/2020/03/16/Incoterms-2010/</url>
+      
+        <content type="html"><![CDATA[<h1 id="RULES-FOR-ANY-MODE-OR-MODES-OF-TRANSPORT"><a href="#RULES-FOR-ANY-MODE-OR-MODES-OF-TRANSPORT" class="headerlink" title="RULES FOR ANY MODE OR MODES OF TRANSPORT"></a>RULES FOR ANY MODE OR MODES OF TRANSPORT</h1><h2 id="EXW-–-Ex-Works"><a href="#EXW-–-Ex-Works" class="headerlink" title="EXW – Ex Works"></a>EXW – Ex Works</h2><p>“Ex Works” means that the seller delivers when it places the goods at the disposal of the buyer at the seller’s premises or at another named place<a id="more"></a> (i.e., works, factory, warehouse, etc.). The seller does not need to load the goods on any collecting vehicle, nor does it need to clear the goods for export, where such clearance is applicable.</p><h2 id="FCA-–-Free-Carrier"><a href="#FCA-–-Free-Carrier" class="headerlink" title="FCA – Free Carrier"></a>FCA – Free Carrier</h2><p>“Free Carrier” means that the seller delivers the goods to the carrier or another person nominated by the buyer at the seller’s premises or another named place. The parties are well advised to specify as clearly as possible the point within the named place of delivery, as the risk passes to the buyer at that point.</p><h2 id="CPT-–-Carriage-Paid-to"><a href="#CPT-–-Carriage-Paid-to" class="headerlink" title="CPT – Carriage Paid to"></a>CPT – Carriage Paid to</h2><p>“Carriage Paid To” means that the seller delivers the goods to the carrier or another person nominated by the seller at an agreed place (if any such place is agreed between parties) and that the seller must contract for and pay the costs of carriage necessary to bring the goods to the named place of destination.</p><h2 id="CIP-–-Carriage-and-Insurance-Paid-to"><a href="#CIP-–-Carriage-and-Insurance-Paid-to" class="headerlink" title="CIP – Carriage and Insurance Paid to"></a>CIP – Carriage and Insurance Paid to</h2><p>“Carriage and Insurance Paid to” means that the seller delivers the goods to the carrier or another person nominated by the seller at an agreed place (if any such place is agreed between parties) and that the seller must contract for and pay the costs of carriage necessary to bring the goods to the named place of destination. The seller also contracts for insurance cover against the buyer’s risk of loss of or damage to the goods during the carriage. The buyer should note that under CIP the seller is required to obtain insurance only on minimum cover. Should the buyer wish to have more insurance protection, it will need either to agree as much expressly with the seller or to make its own extra insurance arrangements.</p><h2 id="DAT-–-Delivered-at-Terminal"><a href="#DAT-–-Delivered-at-Terminal" class="headerlink" title="DAT – Delivered at Terminal"></a>DAT – Delivered at Terminal</h2><p>“Delivered at Terminal” means that the seller delivers when the goods, once unloaded from the arriving means of transport, are placed at the disposal of the buyer at a named terminal at the named port or place of destination. “Terminal” includes a place, whether covered or not, such as a quay, warehouse, container yard or road, rail or air cargo terminal. The seller bears all risks involved in bringing the goods to and unloading them at the terminal at the named port or place of destination.</p><h3 id="DAP-–-Delivered-at-Place"><a href="#DAP-–-Delivered-at-Place" class="headerlink" title="DAP – Delivered at Place"></a>DAP – Delivered at Place</h3><p>“Delivered at Place” means that the seller delivers when the goods are placed at the disposal of the buyer on the arriving means of transport ready for unloading at the named place of destination. The seller bears all risks involved in bringing the goods to the named place.</p><h2 id="DDP-–-Delivered-Duty-Paid"><a href="#DDP-–-Delivered-Duty-Paid" class="headerlink" title="DDP – Delivered Duty Paid"></a>DDP – Delivered Duty Paid</h2><p>“Delivered Duty Paid” means that the seller delivers the goods when the goods are placed at the disposal of the buyer, cleared for import on the arriving means of transport ready for unloading at the named place of destination. The seller bears all the costs and risks involved in bringing the goods to the place of destination and has an obligation to clear the goods not only for export but also for import, to pay any duty for both export and import and to carry out all customs formalities.</p><h1 id="RULES-FOR-SEA-AND-INLAND-WATERWAY-TRANSPORT"><a href="#RULES-FOR-SEA-AND-INLAND-WATERWAY-TRANSPORT" class="headerlink" title="RULES FOR SEA AND INLAND WATERWAY TRANSPORT"></a>RULES FOR SEA AND INLAND WATERWAY TRANSPORT</h1><h2 id="FAS-–-Free-Alongside-Ship"><a href="#FAS-–-Free-Alongside-Ship" class="headerlink" title="FAS – Free Alongside Ship"></a>FAS – Free Alongside Ship</h2><p>“Free Alongside Ship” means that the seller delivers when the goods are placed alongside the vessel (e.g., on a quay or a barge) nominated by the buyer at the named port of shipment. The risk of loss of or damage to the goods passes when the goods are alongside the ship, and the buyer bears all costs from that moment onwards.</p><h2 id="FOB-–-Free-On-Board"><a href="#FOB-–-Free-On-Board" class="headerlink" title="FOB – Free On Board"></a>FOB – Free On Board</h2><p>“Free On Board” means that the seller delivers the goods on board the vessel nominated by the buyer at the named port of shipment or procures the goods already so delivered. The risk of loss of or damage to the goods passes when the goods are on board the vessel, and the buyer bears all costs from that moment onwards.</p><h2 id="CFR-–-Cost-and-Freight"><a href="#CFR-–-Cost-and-Freight" class="headerlink" title="CFR – Cost and Freight"></a>CFR – Cost and Freight</h2><p>“Cost and Freight” means that the seller delivers the goods on board the vessel or procures the goods already so delivered. The risk of loss of or damage to the goods passes when the goods are on board the vessel. the seller must contract for and pay the costs and freight necessary to bring the goods to the named port of destination.</p><h2 id="CIF-–-Cost-Insurance-and-Freight"><a href="#CIF-–-Cost-Insurance-and-Freight" class="headerlink" title="CIF – Cost, Insurance and Freight"></a>CIF – Cost, Insurance and Freight</h2><p>“Cost, Insurance and Freight” means that the seller delivers the goods on board the vessel or procures the goods already so delivered. The risk of loss of or damage to the goods passes when the goods are on board the vessel. The seller must contract for and pay the costs and freight necessary to bring the goods to the named port of destination. The seller also contracts for insurance cover against the buyer’s risk of loss of or damage to the goods during the carriage. The buyer should note that under CIF the seller is required to obtain insurance only on minimum cover. Should the buyer wish to have more insurance protection, it will need either to agree as much expressly with the seller or to make its own extra insurance arrangements.</p><p>Copy from:</p><ol><li><a href="https://iccwbo.org/resources-for-business/incoterms-rules/incoterms-rules-2010/" target="_blank" rel="noopener">https://iccwbo.org/resources-for-business/incoterms-rules/incoterms-rules-2010/</a></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> logistics </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> logistics </tag>
+            
+            <tag> incoterms </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Yay! You’re on Rails!</title>
+      <link href="/2020/03/15/Yay-You%E2%80%99re-on-Rails/"/>
+      <url>/2020/03/15/Yay-You%E2%80%99re-on-Rails/</url>
+      
+        <content type="html"><![CDATA[<ol><li>create my 1st rails appliaction<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rails new blog</span><br></pre></td></tr></table></figure>got stuck during <code>bundle install</code> running<a id="more"></a>ctrl+c exit</li><li>Change local gem source and run <code>bundle install</code> again<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cd blog</span><br><span class="line">vim Gemfile</span><br><span class="line">source &#39;https:&#x2F;&#x2F;gems.ruby-china.com&#39;</span><br><span class="line">#source &#39;https:&#x2F;&#x2F;rubygems.org&#39;</span><br><span class="line">bundle install</span><br><span class="line">...</span><br><span class="line">Bundle complete! 17 Gemfile dependencies, 75 gems now installed.</span><br></pre></td></tr></table></figure></li><li>Install Yarn and webpacker<br>try <code>rails server</code> got webpacker missing error<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;var&#x2F;lib&#x2F;gems&#x2F;2.5.0&#x2F;gems&#x2F;webpacker-4.2.2&#x2F;lib&#x2F;webpacker&#x2F;configuration.rb:95:in &#96;rescue in load&#39;: Webpacker configuration file not found &#x2F;home&#x2F;ubuntu&#x2F;rails-blog&#x2F;config&#x2F;webpacker.yml. Please run rails webpacker:install Error: No such file or directory @ rb_sysopen - &#x2F;home&#x2F;ubuntu&#x2F;rails-blog&#x2F;config&#x2F;webpacker.yml (RuntimeError)</span><br></pre></td></tr></table></figure>try <code>rails webpacker:install</code> got<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Yarn not installed.</span><br></pre></td></tr></table></figure><ul><li>install Yarn<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">curl -sS https:&#x2F;&#x2F;dl.yarnpkg.com&#x2F;debian&#x2F;pubkey.gpg | sudo apt-key add -</span><br><span class="line">echo &quot;deb https:&#x2F;&#x2F;dl.yarnpkg.com&#x2F;debian&#x2F; stable main&quot; | sudo tee &#x2F;etc&#x2F;apt&#x2F;sources.list.d&#x2F;yarn.list</span><br><span class="line">sudo apt update &amp;&amp; sudo apt install yarn</span><br></pre></td></tr></table></figure></li><li>install webpacker<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">rails webpacker:install</span><br><span class="line">...</span><br><span class="line">Webpacker successfully installed</span><br></pre></td></tr></table></figure></li></ul></li><li>Yay! You’re on Rails!<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rails server</span><br></pre></td></tr></table></figure></li></ol><hr><p>change gem and bundle source</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gem sources --add https:&#x2F;&#x2F;gems.ruby-china.com&#x2F; --remove https:&#x2F;&#x2F;rubygems.org&#x2F;</span><br><span class="line">bundle config mirror.https:&#x2F;&#x2F;rubygems.org https:&#x2F;&#x2F;gems.ruby-china.com</span><br></pre></td></tr></table></figure><p>Reference from:</p><ol><li><blockquote><p>Getting Started with Rails</p><footer><strong>rubyonrails.org</strong><cite><a href="https://guides.rubyonrails.org/getting_started.html" target="_blank" rel="noopener">guides.rubyonrails.org/getting_started.html</a></cite></footer></blockquote></li><li><blockquote><p>On Debian or Ubuntu Linux, you can install Yarn via our Debian package repository. </p><footer><strong>yarnpkg.com</strong><cite><a href="https://classic.yarnpkg.com/en/docs/install/#debian-stable" target="_blank" rel="noopener">classic.yarnpkg.com/en/docs/install/#debian-stable</a></cite></footer></blockquote></li><li><a href="https://gems.ruby-china.com/" target="_blank" rel="noopener">https://gems.ruby-china.com/</a></li><li><a href="https://bundler.io/v1.16/bundle_config.html" target="_blank" rel="noopener">https://bundler.io/v1.16/bundle_config.html</a></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> rails </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> rails </tag>
+            
+            <tag> gem </tag>
+            
+            <tag> yarn </tag>
+            
+            <tag> bundle </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Install rails on ubuntu</title>
+      <link href="/2020/03/14/Install-rails-on-ubuntu/"/>
+      <url>/2020/03/14/Install-rails-on-ubuntu/</url>
+      
+        <content type="html"><![CDATA[<ol><li>Install Ruby and SQLite3</li><li>Install Rails with gem<a id="more"></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gem install rails</span><br></pre></td></tr></table></figure>got below error:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">ERROR:  Error installing rails:</span><br><span class="line">        ERROR: Failed to build gem native extension.</span><br><span class="line"></span><br><span class="line">    current directory: &#x2F;var&#x2F;lib&#x2F;gems&#x2F;2.5.0&#x2F;gems&#x2F;nokogiri-1.10.9&#x2F;ext&#x2F;nokogiri</span><br><span class="line">&#x2F;usr&#x2F;bin&#x2F;ruby2.5 -r .&#x2F;siteconf20200314-38-xxyy88.rb extconf.rb</span><br><span class="line">checking if the C compiler accepts ... yes</span><br><span class="line">Building nokogiri using packaged libraries.</span><br><span class="line">Using mini_portile version 2.4.0</span><br><span class="line">checking for gzdopen() in -lz... no</span><br><span class="line">zlib is missing; necessary for building libxml2</span><br><span class="line">*** extconf.rb failed ***</span><br></pre></td></tr></table></figure>After try install nokogiri<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gem install nokogiri</span><br></pre></td></tr></table></figure>Error:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">ERROR:  Error installing nokogiri:</span><br><span class="line">        ERROR: Failed to build gem native extension.</span><br><span class="line"></span><br><span class="line">    current directory: &#x2F;var&#x2F;lib&#x2F;gems&#x2F;2.5.0&#x2F;gems&#x2F;nokogiri-1.10.9&#x2F;ext&#x2F;nokogiri</span><br><span class="line">&#x2F;usr&#x2F;bin&#x2F;ruby2.5 -r .&#x2F;siteconf20200314-78-1wo5kzo.rb extconf.rb</span><br><span class="line">checking if the C compiler accepts ... yes</span><br><span class="line">Building nokogiri using packaged libraries.</span><br><span class="line">Using mini_portile version 2.4.0</span><br><span class="line">checking for gzdopen() in -lz... no</span><br><span class="line">zlib is missing; necessary for building libxml2</span><br></pre></td></tr></table></figure>checked log and found the cause, install libz-dev and then install nokogiri<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vim &#x2F;var&#x2F;lib&#x2F;gems&#x2F;2.5.0&#x2F;extensions&#x2F;x86_64-linux&#x2F;2.5.0&#x2F;nokogiri-1.10.9&#x2F;mkmf.log</span><br><span class="line">sudo apt-get install libz-dev</span><br><span class="line">sudo gem install nokogiri</span><br></pre></td></tr></table></figure></li><li>try install rails again<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gem install rails</span><br></pre></td></tr></table></figure>Check result with <code>rails -v</code>.<br>It’s done.</li></ol><p>Reference from:</p><ol><li><blockquote><p>Getting Started with Rails</p><footer><strong>rubyonrails.org</strong><cite><a href="https://guides.rubyonrails.org/getting_started.html" target="_blank" rel="noopener">guides.rubyonrails.org/getting_started.html</a></cite></footer></blockquote></li><li><blockquote><p>How to fix fatal error: zlib.h: no such file or directory?</p><footer><strong>kenorb</strong><cite><a href="https://stackoverflow.com/questions/36374267/how-to-fix-fatal-error-zlib-h-no-such-file-or-directory" target="_blank" rel="noopener">stackoverflow.com/questions/36374267/how-to-fix-fatal-error-zlib-h-no-such-file-or-directory</a></cite></footer></blockquote></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> rails </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ruby </tag>
+            
+            <tag> sqlite3 </tag>
+            
+            <tag> rails </tag>
+            
+            <tag> nokogiri </tag>
+            
+            <tag> gem </tag>
+            
+            <tag> zlib </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Install sqlite3 on ubuntu by compiling from source code</title>
+      <link href="/2020/03/13/Install-sqlite3-on-ubuntu-by-compiling-from-source-code/"/>
+      <url>/2020/03/13/Install-sqlite3-on-ubuntu-by-compiling-from-source-code/</url>
+      
+        <content type="html"><![CDATA[<ol><li>prepare build tools if tools not ready<a id="more"></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install build-essential</span><br></pre></td></tr></table></figure></li><li>download source code package from <a href="https://www.sqlite.org/download.html" target="_blank" rel="noopener">https://www.sqlite.org/download.html</a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -O https:&#x2F;&#x2F;www.sqlite.org&#x2F;snapshot&#x2F;sqlite-snapshot-202003121754.tar.gz</span><br></pre></td></tr></table></figure></li><li>unzip and enter the dir<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tar xvzf sqlite...tar.gz</span><br><span class="line">cd sqlite...</span><br></pre></td></tr></table></figure></li><li>compile, build and install<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.&#x2F;configure</span><br><span class="line">make</span><br><span class="line">#if failed, try &quot;make clean&quot; and run &quot;make&quot; again</span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure></li></ol><p>Reference from:</p><ol><li><a href="https://stackoverflow.com/questions/19816275/no-acceptable-c-compiler-found-in-path-when-installing-python" target="_blank" rel="noopener">https://stackoverflow.com/questions/19816275/no-acceptable-c-compiler-found-in-path-when-installing-python</a></li><li>INSTALL doc in the package</li><li><blockquote><p>SQLite 安装</p><footer><strong>runoob.com</strong><cite><a href="https://www.runoob.com/sqlite/sqlite-installation.html" target="_blank" rel="noopener">www.runoob.com/sqlite/sqlite-installation.html</a></cite></footer></blockquote></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> make </tag>
+            
+            <tag> compile </tag>
+            
+            <tag> build </tag>
+            
+            <tag> install </tag>
+            
+            <tag> sqlite </tag>
+            
+            <tag> ubuntu </tag>
+            
+            <tag> build-essential </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Config redmine email smtp with outlook.com mail service</title>
+      <link href="/2020/03/09/Config-redmine-email-smtp-with-outlook-com-mail-service/"/>
+      <url>/2020/03/09/Config-redmine-email-smtp-with-outlook-com-mail-service/</url>
+      
+        <content type="html"><![CDATA[<ol><li>edit redmine-root/config/configuration.yml<a id="more"></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">production:</span><br><span class="line">  email_delivery:</span><br><span class="line">    delivery_method: :smtp</span><br><span class="line">    smtp_settings:</span><br><span class="line">      enable_starttls_auto: true</span><br><span class="line">      address: &quot;smtp.office365.com&quot;</span><br><span class="line">      port: 587</span><br><span class="line">      domain: &quot;outlook.com&quot;</span><br><span class="line">      authentication: :login</span><br><span class="line">      user_name: &quot;username@outlook.com&quot;</span><br><span class="line">      password: &quot;password&quot;</span><br></pre></td></tr></table></figure></li><li>Restart your redmine daemon, options of “Administration : Email Notification” will be available.</li><li>Send a test email via redmine Administration : Email Notification tab<br>If you got error like “WASCL UserAction verdict is not None. Actual verdict is HipNotify, ShowTierUpgrade.”,<br>please check your outlook.com inbox and follow the guide to validate your Outlook.com account.<br>And try again.</li><li>Check your receiving email inbox or junk email, it’s done.</li></ol><p>Reference from:</p><blockquote><p>Here is an example for Office 365 users (Exchange online).</p><footer><strong>redmine, redmine.org</strong><cite><a href="https://www.redmine.org/projects/redmine/wiki/EmailConfiguration#Office-365-Exchange-Online" target="_blank" rel="noopener">Email Configuration</a></cite></footer></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> redmine </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> config </tag>
+            
+            <tag> redmine </tag>
+            
+            <tag> outlook.com </tag>
+            
+            <tag> smtp </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Synchronize between multiple hexo bases</title>
+      <link href="/2020/03/07/Synchronize-between-multiple-hexo-bases/"/>
+      <url>/2020/03/07/Synchronize-between-multiple-hexo-bases/</url>
+      
+        <content type="html"><![CDATA[<h1 id="your-github-io-setup"><a href="#your-github-io-setup" class="headerlink" title="your.github.io setup"></a>your.github.io setup</h1><ol><li>Initial your.github.io with hexo deployment</li><li>Create a branch named “hexo” from your.github.io master branch</li><li>Set “hexo” as your default branch of your.github.io</li></ol><a id="more"></a><h1 id="your-new-hexo-bases-setup"><a href="#your-new-hexo-bases-setup" class="headerlink" title="your new hexo bases setup"></a>your new hexo bases setup</h1><ol><li>Git clone <a href="mailto:git@github.com">git@github.com</a>:your/your.github.io.git</li><li>Change dir to your cloned “hexo”, install packages for hexo<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd your.github.io</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure></li><li>Make sure deploy branch in _config.yml is master</li></ol><h1 id="Synchronize"><a href="#Synchronize" class="headerlink" title="Synchronize"></a>Synchronize</h1><ol><li>git clone for inintial hexo base</li><li>Install theme if you are not using “landscape”<h2 id="themes-next-example"><a href="#themes-next-example" class="headerlink" title="themes/next example"></a>themes/next example</h2></li><li>On your up to date hexo base: Copy your “themes/next/_config.yml” to your “hexo” branch root<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cp themes&#x2F;next&#x2F;_config.yml next-config.yml</span><br><span class="line">git add .</span><br><span class="line">git commit -m &quot;sync theme config&quot;</span><br><span class="line">git push</span><br></pre></td></tr></table></figure></li><li>On your new hexo base: git pull to get the latest theme’s config<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git pull</span><br><span class="line">cp next-config.yml themes&#x2F;next&#x2F;_config.yml</span><br></pre></td></tr></table></figure><h1 id="Writing"><a href="#Writing" class="headerlink" title="Writing"></a>Writing</h1></li><li>hexo new post to start writing</li><li>after writing commit source to your.github.io “hexo” branch<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit</span><br><span class="line">git push</span><br></pre></td></tr></table></figure></li><li>hexo g -d to deploy to your.github.io master branch</li></ol><p>Reference from:</p><blockquote><p>使用hexo，如果换了电脑怎么更新博客？</p><footer><strong>CrazyMilk</strong><cite><a href="https://www.zhihu.com/question/21193762" target="_blank" rel="noopener">www.zhihu.com/question/21193762</a></cite></footer></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> git </tag>
+            
+            <tag> hexo </tag>
+            
+            <tag> branch </tag>
+            
+            <tag> github </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
